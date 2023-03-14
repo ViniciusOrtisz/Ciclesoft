@@ -7,7 +7,7 @@ estoque que são realizados dentro destas pequenas empresas, possibilitando a re
 de pedido, entre outros processos e por fim realizar a venda do produto para o cliente, que no caso são bicicletas já montadas.
 
 
-# CLASSES
+# CLASSES 
 
 Classe Cliente
 
@@ -17,10 +17,9 @@ Classe Produtos
 
 Classe Fornecedores
 
-Classe Funcionarios
+Classe Funcionários
 
-
-
+Classe Pesquisa
 
 
 
