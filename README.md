@@ -7,7 +7,12 @@ estoque que são realizados dentro destas pequenas empresas, possibilitando a re
 de pedido, entre outros processos e por fim realizar a venda do produto para o cliente, que no caso são bicicletas já montadas.
 
 
+
+
+
 # CLASSES 
+![image](https://user-images.githubusercontent.com/119326011/225165157-571866a1-1ba7-4d7b-b947-adc5bd1d5ed6.png)
+
 
 Classe Cliente
 
