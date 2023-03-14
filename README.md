@@ -11,6 +11,8 @@ de pedido, entre outros processos e por fim realizar a venda do produto para o c
 
 
 # CLASSES 
+
+Apos a discução e criação das classes, foi atribuido a responsabilidade para cada um cuidar de uma classe 
 ![image](https://user-images.githubusercontent.com/119326011/225165852-241f84a9-5d44-47fa-9cee-7b88dc182073.png)
 
 Classe Cliente
