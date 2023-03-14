@@ -11,8 +11,7 @@ de pedido, entre outros processos e por fim realizar a venda do produto para o c
 
 
 # CLASSES 
-![image](https://user-images.githubusercontent.com/119326011/225165157-571866a1-1ba7-4d7b-b947-adc5bd1d5ed6.png)
-
+![image](https://user-images.githubusercontent.com/119326011/225165852-241f84a9-5d44-47fa-9cee-7b88dc182073.png)
 
 Classe Cliente
 
