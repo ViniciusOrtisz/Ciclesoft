@@ -19,7 +19,6 @@ Classe Fornecedores
 
 Classe Funcionários
 
-Classe Pesquisa
 
 
 
