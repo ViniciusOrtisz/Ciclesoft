@@ -1,9 +1,4 @@
-# Loja de venda de Bicicletas
-
-
-
-
-# ESBOÇO
+# Ciclesoft - Sistema de Vendas de bicicletas
 
 Bom, basicamente a Ciclesoft vem para sanar os problemas na logística de venda e administração do comércio ligado a rede e indústria de bicicletas, focados nisso,
 desenvolvemos um software na linguagem de programação JAVA que atende todas essas demandas. O Comércio e a prestação de serviços no ramo de bicicletas, é conhecido no 
