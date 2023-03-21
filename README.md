@@ -27,5 +27,9 @@ Classe Fornecedores
 Classe Funcionários
 
 
+Agora o proximo passo é fazer o Diagrama de Classes para cada Classe.
+
+https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilhado para diagrama de classe )
+
 
 
