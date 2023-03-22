@@ -40,3 +40,25 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 
 
 
+
+
+#CLASSE VENDAS
+[1] Pagamentos - Click
+
+[1] FORMA DE PAGAMENTO - click
+INFORME QUAL O ID DA VENDA.
+VERIFICAÇÃO
+	[1]DINHEIRO AVISTA
+	[2]CARTAO
+		[1] DEBITO
+		[2] CREDITO
+			[1]AVISTA
+			[2]PARCELADO
+	[3]BOLETO - PRAZO 30 dias
+	[4]PIX - à vista
+	[5]DEPOSITO - à vista
+	[6]TRANSFERENCIA - à vista
+
+[2] ATUALIZAR VENDA
+[3] EXCLUIR VENDA
+[4] CONSULTAR VENDA
