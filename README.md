@@ -52,6 +52,9 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 
 
 		VERIFICAÇÃO
+
+		INFORME A FORMA DE PAGAMENTO
+
 		[1]DINHEIRO À VISTA
 	
 		[2]CARTAO
