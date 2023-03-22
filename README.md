@@ -7,7 +7,7 @@ estoque que são realizados dentro destas pequenas empresas, possibilitando a re
 de pedido, entre outros processos e por fim realizar a venda do produto para o cliente, que no caso são bicicletas já montadas.
 
 
-
+Precisamos definir qual forma de pagamento aceita :  
 
 
 # CLASSES 
@@ -25,6 +25,8 @@ Classe Produtos
 Classe Fornecedores
 
 Classe Funcionários
+
+Classe Pagamento
 
 
 Agora o proximo passo é fazer o Diagrama de Classes para cada Classe.
