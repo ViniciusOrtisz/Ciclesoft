@@ -42,7 +42,7 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 
 
 
-# CLASSE VENDAS
+# CLASSE PAGAMENTOS
 
 	[1] Pagamentos - Click
 
