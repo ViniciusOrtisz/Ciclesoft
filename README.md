@@ -9,6 +9,9 @@ de pedido, entre outros processos e por fim realizar a venda do produto para o c
 
 Precisamos definir qual forma de pagamento aceita :  
 
+Precisamos definir quais produtos vamos vender, se será vendido apenas bicicletas ou tambem peças separadamente, e quanto terá de estoque cada um,
+ou se tera um prazo de envio
+
 
 # CLASSES 
 
