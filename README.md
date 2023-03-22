@@ -20,6 +20,7 @@ ou se tera um prazo de envio
 Apos a discução e criação das classes, foi atribuido a responsabilidade para cada membro cuidar de uma classe 
 ![image](https://user-images.githubusercontent.com/119326011/225166173-6f264939-7962-4d63-af4f-37fe6d7a75af.png)
 
+CLasse Menu
 
 Classe Cliente
 
