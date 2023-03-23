@@ -50,16 +50,15 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 # CLASSE MENU
 Precisamos definir no menu, qual vai ser a ordem das operaçoes
 
+	[1]
 
-	  [1]
+    	[2]
 
-    	  [2]
+    	[3]
 
-    	  [3]
+    	[4]
 
-    	  [4]
+    	[5]
 
-    	  [5]
-
-    	  [6]
+    	[6]
 
