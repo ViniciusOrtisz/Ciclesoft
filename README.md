@@ -1,3 +1,6 @@
+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
+
+
 # Ciclesoft - Sistema de Vendas de Bicicletas
 
 Bom, basicamente a Ciclesoft vem para sanar os problemas na logística de venda e administração do comércio ligado a rede e indústria de bicicletas, focados nisso,
