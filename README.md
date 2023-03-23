@@ -45,51 +45,12 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 
 
 
+Precisamos definir no menu, qual vai ser a ordem das operaçoes
 
 # CLASSE MENU
-
-	[1] Pagamentos - Click
-
-	[1] FORMA DE PAGAMENTO - click
-
-	INFORME QUAL O ID DA VENDA.
-
-
-		VERIFICAÇÃO
-
-		INFORME A FORMA DE PAGAMENTO
-
-		[1]DINHEIRO À VISTA
-	
-		[2]CARTAO
-	
-			[1] DEBITO
-		
-			[2] CREDITO
-		
-				[1]AVISTA
-			
-				[2]PARCELADO
-			
-		[3]BOLETO - PRAZO 30 dias
-	
-		[4]PIX - à vista
-			[1]GERAR QRCODE
-
-			[2]GERAR CHAVE
-	
-		[5]DEPOSITO - à vista
-	
-		Os dados para deposito são :
-	
-		[6]TRANSFERENCIA - à vista
-	
-		Os dados para transferencia são:
-
-
-	[2] ATUALIZAR VENDA
-
-	[3] EXCLUIR VENDA
-
-	[4] CONSULTAR VENDA
-
+[1]
+[2]
+[3]
+[4]
+[5]
+[6]
