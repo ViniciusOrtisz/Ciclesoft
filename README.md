@@ -45,12 +45,19 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 
 
 
-Precisamos definir no menu, qual vai ser a ordem das operaçoes
+
 
 # CLASSE MENU
+Precisamos definir no menu, qual vai ser a ordem das operaçoes
 [1]
+
 [2]
+
 [3]
+
 [4]
+
 [5]
+
 [6]
+
