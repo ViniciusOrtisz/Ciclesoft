@@ -19,9 +19,9 @@ CLasse Menu
 
 Classe Cliente
 
-Classe Vendas
+Classe Vendas - Responsavel por filtrar as vendas executadas
 
-Classe ExecutarVenda
+Classe ExecutarVenda - Responsavel por gerar a venda
 
 Classe Produtos
 
