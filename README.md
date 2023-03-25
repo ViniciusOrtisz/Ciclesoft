@@ -19,26 +19,7 @@ CLasse Menu
 
 Classe Cliente
 
-Classe Vendas - Responsavel por filtrar as vendas executadas
-
-Classe ExecutarVenda - Responsavel por gerar a venda
-
-- Informe a Data da Venda
-- Informe a forma de pagamento
-- Informe o Vendedor
-- Informe o ID do cliente
-- Informe o ID do Produto
-- Infomr a quantidade de itens
-
-- DESCONTO
-
-- VALOR TOTAL
-- PESO TOTAL
-
-- CANCELAR VENDA
-- VER RESUMO DA VENDA
-- GRAVAR VENDA
-- GERAR ORÇAMENTO ( SEM VENDA )
+Classe Vendas - Responsavel por executar e apresentar relatorio de vendas
 
 Classe Produtos
 
