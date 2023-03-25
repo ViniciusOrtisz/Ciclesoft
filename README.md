@@ -10,14 +10,6 @@ estoque que são realizados dentro destas pequenas empresas, possibilitando a re
 de pedido, entre outros processos e por fim realizar a venda do produto para o cliente, que no caso são bicicletas já montadas.
 
 
-# Coisas a definir para o escopo/esboço
-
-Precisamos definir qual forma de pagamento aceita : 
-
-Precisamos definir quais produtos vamos vender, se será vendido apenas bicicletas ou tambem peças separadamente, e quanto terá de estoque cada um,
-ou se tera um prazo de envio
-
-
 # CLASSES 
 
 Apos a discução e criação das classes, foi atribuido a responsabilidade para cada membro cuidar de uma classe 
@@ -29,13 +21,13 @@ Classe Cliente
 
 Classe Vendas
 
+Classe ExecutarVenda
+
 Classe Produtos
 
 Classe Fornecedores
 
 Classe Funcionários
-
-Classe Pagamento
 
 
 Agora o proximo passo é fazer o Diagrama de Classes para cada Classe.
