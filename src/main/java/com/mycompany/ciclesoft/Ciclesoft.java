@@ -9,8 +9,11 @@ public class Ciclesoft {
 
     public static void main(String[] args) {
 
-      Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        
+        
         System.out.println("|Ciclesoft|-|Seja Bem-Vindo| - Através do Menu Escolha um módulo");
+        
         do {
             System.out.println("xxxxxxxx MENU PRINCIPAL xxxxxxxx");
             System.out.println("xx [1]CLIENTE");
@@ -20,13 +23,13 @@ public class Ciclesoft {
             System.out.println("xx [5]FUNCIONARIOS");
             System.out.println("xx [0]SAIR");
             System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-            // enquanto a proxima leitura for DIFERENTE de um INT 
+           
             while (!scanner.hasNextInt()) {
                 System.out.print("Try again: Invalid character");
-                scanner.next(); // throw away
+                scanner.next();
             }
-            int choice = scanner.nextInt();
-            switch (choice) {
+            int opcao = scanner.nextInt();
+            switch (opcao) {
                 case 1:
                     System.out.println("xxxxxxxx MENU CLIENTE xxxxxxxx");
                     
@@ -38,8 +41,8 @@ public class Ciclesoft {
                         System.out.print("Try again: Invalid character");
                         scanner.next(); // throw away
                     }
-                    choice = scanner.nextInt();
-                    switch (choice) {
+                    opcao = scanner.nextInt();
+                    switch (opcao) {
                         case 1:
                             System.out.println("====CADASTRAR CLIENTE ====");
                             System.out.println("Nome : ");
@@ -74,8 +77,8 @@ public class Ciclesoft {
                         System.out.print("Try again: Invalid character");
                         scanner.next(); // throw away
                     }
-                    choice = scanner.nextInt();
-                    switch (choice) {
+                    opcao = scanner.nextInt();
+                    switch (opcao) {
                         case 1:
                             System.out.println("====CADASTRAR VENDA====");
 
@@ -108,8 +111,8 @@ public class Ciclesoft {
                         System.out.print("Try again: Invalid character");
                         scanner.next(); // throw away
                     }
-                    choice = scanner.nextInt();
-                    switch (choice) {
+                    opcao = scanner.nextInt();
+                    switch (opcao) {
                         case 1:
                             System.out.println("====CADASTRAR PRODUTO====");
                             break;
@@ -139,8 +142,8 @@ public class Ciclesoft {
                         System.out.print("Try again: Invalid character");
                         scanner.next(); // throw away
                     }
-                    choice = scanner.nextInt();
-                    switch (choice) {
+                    opcao = scanner.nextInt();
+                    switch (opcao) {
                         case 1:
                             System.out.println("====CADASTRAR FORNECEDOR====");
 
@@ -168,8 +171,8 @@ public class Ciclesoft {
                         System.out.print("Try again: Invalid character");
                         scanner.next(); // throw away
                     }
-                    choice = scanner.nextInt();
-                    switch (choice) {
+                    opcao = scanner.nextInt();
+                    switch (opcao) {
                         case 1:
                             System.out.println("====CADASTRAR FUNCINARIO====");
 
