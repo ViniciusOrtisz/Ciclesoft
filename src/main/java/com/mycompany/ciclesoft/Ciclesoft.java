@@ -16,12 +16,12 @@ public class Ciclesoft {
         
         do {
             System.out.println("xxxxxxxx MENU PRINCIPAL xxxxxxxx");
-            System.out.println("xx [1]CLIENTE");
-            System.out.println("xx [2]VENDAS");
-            System.out.println("xx [3]PRODUTOS");
-            System.out.println("xx [4]FORNECEDORES");
-            System.out.println("xx [5]FUNCIONARIOS");
-            System.out.println("xx [0]SAIR");
+            System.out.println("[1]CLIENTE");
+            System.out.println("[2]VENDAS");
+            System.out.println("[3]PRODUTOS");
+            System.out.println("[4]FORNECEDORES");
+            System.out.println("[5]FUNCIONARIOS");
+            System.out.println("[0]SAIR");
             System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
            
             while (!scanner.hasNextInt()) {
