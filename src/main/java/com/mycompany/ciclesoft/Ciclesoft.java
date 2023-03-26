@@ -9,43 +9,80 @@ public class Ciclesoft {
 
     public static void main(String[] args) {
 
-        Scanner Ler = new Scanner(System.in);
-        int op = -1;
-
+       Scanner scanner = new Scanner(System.in);
         System.out.println("|Ciclesoft|-|Seja Bem-Vindo| - Através do Menu Escolha um módulo");
-        while (op != 0) {
-            System.out.println("[0] Logout");
-            System.out.println("[1] Clientes");
-            System.out.println("[2] Produtos");
-            System.out.println("[3] Funcionários");
-            System.out.println("[4] Fornecedores");
-            System.out.println("[5] Vendas");
+        do {
 
-            op = Ler.nextInt();
+            System.out.println("[1]CLIENTE");
+            System.out.println("[2]VENDAS");
+            System.out.println("[3]PRODUTOS");
+            System.out.println("[4]FORNECEDORES");
+            System.out.println("[5]FUNCIONARIOS");
+            System.out.println("[0]SAIR");
 
-            switch (op) {
-                
+            // enquanto a proxima leitura for DIFERENTE de um INT 
+            while (!scanner.hasNextInt()) {
+                System.out.print("Try again: Invalid character");
+                scanner.next(); // throw away
+            }
+            int choice = scanner.nextInt();
+            switch (choice) {
                 case 1:
-                    while (op != 0) {
-                        System.out.println("Bem Vindo ao módulo de Clientes");
-                        System.out.println("[1] Cadastro de Clientes");
-                        System.out.println("[2] Atualizar Informações de Cliente");
-                        System.out.println("[3] Consultar Informações de Cliente");
-                        System.out.println("[4] Excluir Cliente");
-                        
-                        op = Ler.nextInt();
 
-                        switch (op) {
+                    System.out.println("ENTROU NA OPCÃO CLIENTE");
+                    System.out.println("[1]CADASTRAR CLIENTE");
+                    System.out.println("[2]EDITAR CLIENTE");
+                    System.out.println("[3]EXCLUIR CLIENTE");
+                    System.out.println("[0]VOLTAR");
+                    while (!scanner.hasNextInt()) {
+                        System.out.print("Try again: Invalid character");
+                        scanner.next(); // throw away
+                    }
+                    choice = scanner.nextInt();
+                    switch (choice) {
+                        case 1:
+                            System.out.println("Nome : ");
                             
-                            case 1:
-                                System.out.println("Informe dados para cadastro do Cliente");
-                                break;
-                                
+                            break;
+
+                        case 2:
+                            System.out.println("EDITAR CLIENTE");
+                            break;
+                        case 3:
+                            System.out.println("EXCLUIR CLIENTE");
+                            break;
+
+                        case 0:
+
+                            break;
+
+                    }
+                    break;
+
+                case 2:
+                    System.out.println("OPCAO2");
+
+                    break;
+                case 3:
+                    System.out.println("OPCAO3");
+
+                    break;
+                case 4:
+                    System.out.println("OPCAO4");
+
+                    break;
+                case 5:
+                    System.out.println("OPCAO5");
+
+                    break;
+
+                case 0:
+
+                    break;
 
             }
-        }
-            }
-            
-        }
+
+        } while (true);
     }
+
 }
