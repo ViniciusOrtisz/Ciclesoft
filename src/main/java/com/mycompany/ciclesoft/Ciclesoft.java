@@ -20,7 +20,6 @@ public class Ciclesoft {
             System.out.println("[3]PRODUTOS");
             System.out.println("[4]FORNECEDORES");
             System.out.println("[5]FUNCIONARIOS");
-            System.out.println("[0]SAIR");
             System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
             while (!scanner.hasNextInt()) {
