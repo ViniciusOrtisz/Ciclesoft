@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class Ciclesoft {
 
     public static void main(String[] args) {
-
+        int opcao = -1;
+        int opcaoClasses;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("|Ciclesoft|-|Seja Bem-Vindo| - Através do Menu Escolha um módulo");
@@ -20,13 +21,14 @@ public class Ciclesoft {
             System.out.println("[3]PRODUTOS");
             System.out.println("[4]FORNECEDORES");
             System.out.println("[5]FUNCIONARIOS");
+            Systenm.out.println("[0]SAIR");
             System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
             while (!scanner.hasNextInt()) {
                 System.out.print("Tente novamente escolhendo uma das opcoes acima");
                 scanner.next();
             }
-            int opcao = scanner.nextInt();
+            opcao = scanner.nextInt();
             switch (opcao) {
                 case 1:
                     System.out.println("xxxxxxxx MENU CLIENTE xxxxxxxx");
@@ -37,10 +39,10 @@ public class Ciclesoft {
                     System.out.println("[0]VOLTAR");
                     while (!scanner.hasNextInt()) {
                         System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                        scanner.next(); // throw away
+                        scanner.next(); //
                     }
-                    opcao = scanner.nextInt();
-                    switch (opcao) {
+                    opcaoClasses = scanner.nextInt();
+                    switch (opcaoClasses) {
                         case 1:
                             System.out.println("====CADASTRAR CLIENTE ====");
                             System.out.println("Nome : ");
@@ -73,10 +75,10 @@ public class Ciclesoft {
 
                     while (!scanner.hasNextInt()) {
                         System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                        scanner.next(); // throw away
+                        scanner.next();
                     }
-                    opcao = scanner.nextInt();
-                    switch (opcao) {
+                    opcaoClasses = scanner.nextInt();
+                    switch (opcaoClasses) {
                         case 1:
                             System.out.println("====CADASTRAR VENDA====");
 
@@ -107,10 +109,10 @@ public class Ciclesoft {
 
                     while (!scanner.hasNextInt()) {
                         System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                        scanner.next(); // throw away
+                        scanner.next(); 
                     }
-                    opcao = scanner.nextInt();
-                    switch (opcao) {
+                    opcaoClasses = scanner.nextInt();
+                    switch (opcaoClasses) {
                         case 1:
                             System.out.println("====CADASTRAR PRODUTO====");
                             break;
@@ -138,10 +140,10 @@ public class Ciclesoft {
 
                     while (!scanner.hasNextInt()) {
                         System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                        scanner.next(); // throw away
+                        scanner.next(); 
                     }
-                    opcao = scanner.nextInt();
-                    switch (opcao) {
+                    opcaoClasses = scanner.nextInt();
+                    switch (opcaoClasses) {
                         case 1:
                             System.out.println("====CADASTRAR FORNECEDOR====");
 
@@ -169,10 +171,10 @@ public class Ciclesoft {
 
                     while (!scanner.hasNextInt()) {
                         System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                        scanner.next(); // throw away
+                        scanner.next(); 
                     }
-                    opcao = scanner.nextInt();
-                    switch (opcao) {
+                    opcaoClasses = scanner.nextInt();
+                    switch (opcaoClasses) {
                         case 1:
                             System.out.println("====CADASTRAR FUNCINARIO====");
 
@@ -197,7 +199,7 @@ public class Ciclesoft {
 
             }
 
-        } while (true);
+        } while (opcao != 0);
     }
 
 }
