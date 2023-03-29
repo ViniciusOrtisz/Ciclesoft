@@ -40,15 +40,15 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 # CLASSE MENU
 Precisamos definir no menu, qual vai ser a ordem das operaçoes
 
-		[1]
+		[1] CLIENTES
 
-    	[2]
+    	[2] VENDAS
 
-    	[3]
+    	[3] PRODUTOS
 
-    	[4]
+    	[4] FORNECEDOR
 
-    	[5]
+    	[5] FUNCIONARIOS
 
     	[6]
 
