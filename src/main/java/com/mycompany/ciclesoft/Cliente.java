@@ -7,8 +7,8 @@ package com.mycompany.ciclesoft;
 import java.util.Scanner;
 import java.util.Random;
 
-
 public class Cliente {
+
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
     public Cliente cliente[];
@@ -33,7 +33,7 @@ public class Cliente {
         this.estado = estado;
         this.cep = cep;
         this.telefone = telefone;
-        
+
     }
 
     public Cliente[] getCliente() {
@@ -42,21 +42,6 @@ public class Cliente {
 
     public void setCliente(Cliente[] cliente) {
         this.cliente = cliente;
-    }
-
-    public void ExcluirCliente() {
-        this.idCliente = 0;
-        this.nome = "";
-        this.cpf = "";
-        this.rg = "";
-        this.endereco = "";
-        this.bairro = "";
-        this.estado = "";
-        this.cep = "";
-        this.telefone = "";
-        
-        System.out.println("CLIENTE DELETADO");
-        
     }
 
     public void AtualizarCliente() {
@@ -108,11 +93,11 @@ public class Cliente {
                 break;
             case 8:
                 System.out.println("INFORME O CEP :");
-        this.cep = Ler.next();
+                this.cep = Ler.next();
                 break;
             case 9:
                 System.out.println("INFORME O TELEFONE :");
-        this.telefone = Ler.next();
+                this.telefone = Ler.next();
                 break;
             case 0:
 
@@ -120,8 +105,20 @@ public class Cliente {
 
         }
 
-        
-        
+    }
+
+    public void ExcluirCliente() {
+        this.idCliente = 0;
+        this.nome = "";
+        this.cpf = "";
+        this.rg = "";
+        this.endereco = "";
+        this.bairro = "";
+        this.estado = "";
+        this.cep = "";
+        this.telefone = "";
+
+        System.out.println("CLIENTE DELETADO");
 
     }
 
@@ -148,7 +145,6 @@ public class Cliente {
         this.telefone = Ler.next();
 
         System.out.println("CADASTRO REALIZADO COM SUCESSO");
-        
 
     }
 

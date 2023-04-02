@@ -12,10 +12,11 @@ public class Vendas extends Produtos {
 
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
-    Produtos produto[];
+    
     private String dataDaVenda;
     private int idCliente;
-    
+    private int idProduto;
+
     private int quantidade;
     private double valorUnitario;
     public double desconto;
@@ -30,7 +31,7 @@ public class Vendas extends Produtos {
 
         this.dataDaVenda = dataDaVenda;
         this.idCliente = idCliente;
-
+        this.idProduto = idProduto;
         this.quantidade = quantidade;
         this.valorUnitario = valorUnitario;
         this.desconto = desconto;
@@ -49,7 +50,7 @@ public class Vendas extends Produtos {
 
         System.out.println("INFORME O ID DO PRODUTO : ");
         this.idProduto = Ler.nextInt();
-        
+
         System.out.println("INFORME A QUANTIDADE : ");
         this.quantidade = Ler.nextInt();
 
@@ -74,6 +75,86 @@ public class Vendas extends Produtos {
 
     }
 
+    public void AtualizarVenda() {
+
+        System.out.println("[1]DATA DA VENDA");
+        System.out.println("[2]ID DO CLIENTE");
+        System.out.println("[3]ID DO PRODUTO");
+        System.out.println("[4]QUANTIDADE");
+        System.out.println("[5]VALOR UNITARIO");
+        System.out.println("[6]DESCONTO");
+        System.out.println("[7]ID FUNCIONARIO");
+        System.out.println("[8]FORMA DE PAGAMENTO");
+        System.out.println("[9]ID DA VENDA");
+        while (!Ler.hasNextInt()) {
+            System.out.print("Tente novamente escolhendo uma das opcoes acima");
+            Ler.next(); //
+        }
+
+        int opcao = Ler.nextInt();
+        switch (opcao) {
+
+            case 1:
+                System.out.println("INFORME A DATA DA VENDA : ");
+                this.dataDaVenda = Ler.next();
+                break;
+            case 2:
+                System.out.println("INFORME O ID DO CLIENTE : ");
+                this.idCliente = Ler.nextInt();
+                break;
+            case 3:
+                System.out.println("INFORME O ID DO PRODUTO : ");
+                this.idProduto = Ler.nextInt();
+                break;
+            case 4:
+                System.out.println("INFORME A QUANTIDADE : ");
+                this.quantidade = Ler.nextInt();
+                break;
+            case 5:
+                System.out.println("INFORME O VALOR UNITARIO : ");
+                this.valorUnitario = Ler.nextDouble();
+                break;
+            case 6:
+                System.out.println("INFORME O DESCONTO : ");
+                this.desconto = Ler.nextDouble();
+                break;
+            case 7:
+                System.out.println("INFORME O ID DO FUNCIONARIO : ");
+                this.idFuncionario = Ler.nextInt();
+                break;
+            case 8:
+                System.out.println("INFORME A FORMA DE PAGAMENTO");
+                this.formaDePagamento = Ler.next();
+                break;
+            case 9:
+                System.out.println("ID DA VENDA :");
+                this.idVenda = Ler.nextInt();
+                break;
+            case 0:
+
+                break;
+
+        }
+
+    }
+    
+    public void ExcluirVenda() {
+        this.dataDaVenda = "";
+        this.idCliente = 0;
+        this.idProduto = 0;
+        this.quantidade = 0;
+        this.valorUnitario = 0;
+        this.desconto = 0;
+        this.valorTotalVenda = 0;
+        this.idFuncionario = 0;
+        this.formaDePagamento = "";
+        this.idVenda = 0;
+        
+        System.out.println("VENDA DELETADA");
+        
+    }
+
+    
     public String getDataDaVenda() {
         return dataDaVenda;
     }
@@ -89,8 +170,6 @@ public class Vendas extends Produtos {
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }
-
-
 
     public int getQuantidade() {
         return quantidade;
@@ -121,9 +200,7 @@ public class Vendas extends Produtos {
         return valorTotalVenda;
     }
 
-    public void setValorTotalVenda(double valorTotalVenda) {
-        this.valorTotalVenda = valorTotalVenda;
-    }
+   
 
     public int getIdFuncionario() {
         return idFuncionario;
