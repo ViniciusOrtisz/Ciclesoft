@@ -213,21 +213,31 @@ public class Ciclesoft {
                             }
                             break;
                         case 4:
-                            System.out.println("==== RELATORIO VENDA ====");
-
+                            System.out.println("==== RELATORIO DE VENDAS ====");
+                            
+                            
                             for (int i = 0; i < tamanhoDoVetor; i++) {
-                                System.out.println("ID DA VENDA : " + venda[i].getIdVenda());
-                                System.out.println("DATA DA VENDA : " + venda[i].getDataDaVenda());
-                                System.out.println("ID CLIENTE : " + venda[i].getIdCliente());
-                                System.out.println("QUANTIDAD DE ITENS : " + venda[i].getQuantidade());
-                                System.out.println("VALOR UNITARIO: " + venda[i].getValorUnitario());
-                                System.out.println("DESCONTO : " + venda[i].getDesconto());
-                                System.out.println("VALOR TOTAL DA VENDA : " + venda[i].getValorTotalVenda());
-                                System.out.println("ID DO FUNCIONARIO : " + venda[i].getIdFuncionario());
-                                System.out.println("FORMA DE PAGAMENTO : " + venda[i].getFormaDePagamento());
-                                
-                                System.out.println("======================");
+                                venda[i].relatodiosDeVendas();
+                            }
+                            break;
 
+                        case 5:
+                            System.out.println("==== VER UMA VENDA ====");
+                            System.out.println("LISTA DE VENDAS");
+                            for (int j = 0; j < tamanhoDoVetor; j++) {
+                                System.out.println("ID VENDA : " + venda[j].getIdVenda());
+                                System.out.println("ID CLIENTE : " + venda[j].getIdCliente());
+                                System.out.println("Valor total :" + venda[j].getValorTotalVenda());
+                                System.out.println("==========================");
+                            }
+                            System.out.println("INFORME O ID DA VENDA");
+                            informarID = Ler.nextInt();
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+                                if (venda[i].getIdVenda() == informarID) {
+                                    venda[i].relatorioUmaVenda();
+
+                                    i = tamanhoDoVetor;
+                                }
                             }
                             break;
                         case 0:

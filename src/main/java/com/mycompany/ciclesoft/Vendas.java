@@ -12,7 +12,7 @@ public class Vendas extends Produtos {
 
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
-    
+
     private String dataDaVenda;
     private int idCliente;
     private int idProduto;
@@ -137,7 +137,7 @@ public class Vendas extends Produtos {
         }
 
     }
-    
+
     public void ExcluirVenda() {
         this.dataDaVenda = "";
         this.idCliente = 0;
@@ -149,12 +149,11 @@ public class Vendas extends Produtos {
         this.idFuncionario = 0;
         this.formaDePagamento = "";
         this.idVenda = 0;
-        
+
         System.out.println("VENDA DELETADA");
-        
+
     }
 
-    
     public String getDataDaVenda() {
         return dataDaVenda;
     }
@@ -200,8 +199,6 @@ public class Vendas extends Produtos {
         return valorTotalVenda;
     }
 
-   
-
     public int getIdFuncionario() {
         return idFuncionario;
     }
@@ -224,6 +221,50 @@ public class Vendas extends Produtos {
 
     public void setIdVenda(int idVenda) {
         this.idVenda = idVenda;
+    }
+
+    public void relatorioVendas() {
+        System.out.println("ID DA VENDA : " + getIdVenda());
+        System.out.println("DATA DA VENDA : " + getDataDaVenda());
+        System.out.println("ID CLIENTE : " + getIdCliente());
+        System.out.println("QUANTIDAD DE ITENS : " + getQuantidade());
+        System.out.println("VALOR UNITARIO: " + getValorUnitario());
+        System.out.println("DESCONTO : " + getDesconto());
+        System.out.println("VALOR TOTAL DA VENDA : " + getValorTotalVenda());
+        System.out.println("ID DO FUNCIONARIO : " + getIdFuncionario());
+        System.out.println("FORMA DE PAGAMENTO : " + getFormaDePagamento());
+
+        System.out.println("======================");
+
+    }
+
+    public void relatodiosDeVendas() {
+        System.out.println("ID DA VENDA : " + getIdVenda());
+        System.out.println("DATA DA VENDA : " + getDataDaVenda());
+        System.out.println("ID CLIENTE : " + getIdCliente());
+        System.out.println("QUANTIDAD DE ITENS : " + getQuantidade());
+        System.out.println("VALOR UNITARIO: " + getValorUnitario());
+        System.out.println("DESCONTO : " + getDesconto());
+        System.out.println("VALOR TOTAL DA VENDA : " + getValorTotalVenda());
+        System.out.println("ID DO FUNCIONARIO : " + getIdFuncionario());
+        System.out.println("FORMA DE PAGAMENTO : " + getFormaDePagamento());
+
+        System.out.println("======================");
+
+    }
+
+    public void relatorioUmaVenda() {
+        System.out.println("ID DA VENDA : " + getIdVenda());
+        System.out.println("DATA DA VENDA : " + getDataDaVenda());
+        System.out.println("ID CLIENTE : " + getIdCliente());
+        System.out.println("QUANTIDAD DE ITENS : " + getQuantidade());
+        System.out.println("VALOR UNITARIO: " + getValorUnitario());
+        System.out.println("DESCONTO : " + getDesconto());
+        System.out.println("VALOR TOTAL DA VENDA : " + getValorTotalVenda());
+        System.out.println("ID DO FUNCIONARIO : " + getIdFuncionario());
+        System.out.println("FORMA DE PAGAMENTO : " + getFormaDePagamento());
+
+        System.out.println("======================");
     }
 
 }
