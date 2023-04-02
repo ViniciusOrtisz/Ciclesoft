@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class Ciclesoft {
 
+    
+
     public static void main(String[] args) {
         int opcao = -1;
         int opcaoClasses;
@@ -27,7 +29,10 @@ public class Ciclesoft {
             produto[i] = new Produtos(0, 0, 0, "", 0, "", "", "", "", "", "", "", "", 0, "", 0);
             funcionario[i] = new Funcionarios(0, "", "", "", 0, 0, "", "", "", "", "", "", "", "", "", "", "", "");
             cliente[i] = new Cliente(0, "", "", "", "", "", "", "", "");
-            venda[i] = new Vendas("", 0, 0, 0, 0, 0, 0, 0, "", 0);
+            venda[i] = new Vendas(0, 0, 0, "", 0,
+                    "", "", "", "", "", "", "", "", 0, "", 0, "",
+                    0, 0, 0, 0, 0, 0,
+                    "", 0);
         }
 
         System.out.println("|Ciclesoft|-|Seja Bem-Vindo| - Através do Menu Escolha um módulo");
@@ -63,13 +68,14 @@ public class Ciclesoft {
                     switch (opcaoClasses) {
                         case 1:
                             System.out.println("====CADASTRAR CLIENTE ====");
-                            
+
                             for (int i = 0; i < tamanhoDoVetor; i++) {
 
                                 if (cliente[i].getIdCliente() == 0) {
                                     System.out.println("Vetor disponivel > " + i);
                                     cliente[i].CadastrarCliente();
                                     i = tamanhoDoVetor;
+                                    
 
                                     break;
 
@@ -108,7 +114,7 @@ public class Ciclesoft {
                                 System.out.println("ID : " + cliente[j].getIdCliente());
                                 System.out.println("==========================");
                             }
-                            System.out.println("Infomre o ID do cliente para excluir :");
+                            System.out.println("Infomre o ID do CLIENTE para excluir :");
                             informarID = Ler.nextInt();
 
                             for (int i = 0; i < tamanhoDoVetor; i++) {
@@ -128,10 +134,8 @@ public class Ciclesoft {
 
                     }
                     break;
-                    
-                    
-                // VENDA // 
 
+                // VENDA // 
                 case 2:
                     System.out.println("xxxxxxxx MENU VENDA xxxxxxxx");
 
@@ -148,13 +152,29 @@ public class Ciclesoft {
                     opcaoClasses = scanner.nextInt();
                     switch (opcaoClasses) {
                         case 1:
-                          
-                            
+                            System.out.println("====CADASTRAR VENDA ====");
 
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+
+                                if (venda[i].getIdVenda() == 0) {
+                                    System.out.println("Vetor disponivel > " + i);
+                                    venda[i].CadastrarVenda();
+                                    
+                                    
+                                    i = tamanhoDoVetor;
+                                    break;
+
+                                }
+                            }
                             break;
 
                         case 2:
                             System.out.println("====EDITAR VENDA====");
+                            
+                            
+                            
+                            
+                            
                             break;
                         case 3:
                             System.out.println("====EXCLUIR VENDA====");
@@ -169,7 +189,7 @@ public class Ciclesoft {
                     break;
 
                 case 3:
-                    System.out.println("xxxxxxxx MENU PRODUTOS xxxxxxxx");
+                    System.out.println("xxxxxxxx PRODUTOS xxxxxxxx");
 
                     System.out.println("[1]CADASTRAR PRODUTO");
                     System.out.println("[2]EDITAR PRODUTO");
@@ -265,28 +285,79 @@ public class Ciclesoft {
                     opcaoClasses = scanner.nextInt();
                     switch (opcaoClasses) {
                         case 1:
-                            System.out.println("====CADASTRAR FORNECEDOR====");
+                            System.out.println("====CADASTRAR FORNECEDOR ====");
 
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+
+                                if (fornecedor[i].getIdFornecedor() == 0) {
+                                    System.out.println("Vetor disponivel > " + i);
+                                    fornecedor[i].CadastrarFornecedor();
+                                    i = tamanhoDoVetor;
+
+                                    break;
+
+                                }
+                            }
                             break;
                         case 2:
                             System.out.println("====EDITAR FORNECEDOR====");
+
+                            System.out.println("LISTA DE CADASTRO");
+                            for (int j = 0; j < tamanhoDoVetor; j++) {
+                                System.out.println("NOME : " + fornecedor[j].getNomeFornecedor());
+                                System.out.println("ID : " + fornecedor[j].getIdFornecedor());
+                                System.out.println("==========================");
+                            }
+                            System.out.println("Infomre o ID do FORNECEDOR :");
+                            informarID = Ler.nextInt();
+
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+
+                                if (fornecedor[i].getIdFornecedor() == informarID) {
+
+                                    fornecedor[i].AtualizarFornecedor();
+                                    i = tamanhoDoVetor;
+                                }
+
+                            }
+
                             break;
                         case 3:
                             System.out.println("====EXCLUIR FORNECEDOR====");
+
+                            System.out.println("LISTA DE FORNECEDORES");
+                            for (int j = 0; j < tamanhoDoVetor; j++) {
+                                System.out.println("NOME : " + fornecedor[j].getNomeFornecedor());
+                                System.out.println("ID : " + fornecedor[j].getIdFornecedor());
+                                System.out.println("==========================");
+                            }
+                            System.out.println("Infomre o ID do fornecedor para excluir :");
+                            informarID = Ler.nextInt();
+
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+
+                                if (fornecedor[i].getIdFornecedor() == informarID) {
+
+                                    fornecedor[i].ExcluirFornecedor();
+                                    i = tamanhoDoVetor;
+                                }
+
+                            }
                             break;
+
                         case 0:
+
                             break;
+
                     }
                     break;
+
                 case 5:
                     System.out.println("xxxxxxxx MENU FUNCIONARIO xxxxxxxx");
 
                     System.out.println("[1]CADASTRAR NOVO FUNCIONARIO");
-
                     System.out.println("[2]EDITAR FUNCIONARIO");
-
                     System.out.println("[3]EXCLUIR FUNCIONARIO");
-
                     System.out.println("[0]SAIR");
 
                     while (!scanner.hasNextInt()) {
@@ -298,23 +369,69 @@ public class Ciclesoft {
                         case 1:
                             System.out.println("====CADASTRAR FUNCINARIO====");
 
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+
+                                if (funcionario[i].getIdFuncionario() == 0) {
+                                    System.out.println("Vetor disponivel > " + i);
+                                    funcionario[i].CadastrarFuncionario();
+                                    i = tamanhoDoVetor;
+
+                                    break;
+
+                                }
+                            }
                             break;
                         case 2:
-                            System.out.println("====EDITAR FUNCINARIO====");
-                            break;
+                            System.out.println("====EDITAR FUNCIONARIOS====");
 
+                            System.out.println("LISTA DE FUNCIONARIOS");
+                            for (int j = 0; j < tamanhoDoVetor; j++) {
+                                System.out.println("NOME : " + funcionario[j].getNome());
+                                System.out.println("ID : " + funcionario[j].getIdFuncionario());
+                                System.out.println("==========================");
+                            }
+                            System.out.println("Infomre o ID do cliente :");
+                            informarID = Ler.nextInt();
+
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+
+                                if (funcionario[i].getIdFuncionario() == informarID) {
+
+                                    funcionario[i].AtualizarFuncionario();
+                                    i = tamanhoDoVetor;
+                                }
+
+                            }
+
+                            break;
                         case 3:
-                            System.out.println("====EXCLUIR FUNCINARIO====");
+                            System.out.println("====EXCLUIR FORNECEDOR====");
+
+                            System.out.println("LISTA DE FORNECEDORES");
+                            for (int j = 0; j < tamanhoDoVetor; j++) {
+                                System.out.println("NOME : " + funcionario[j].getNome());
+                                System.out.println("ID : " + funcionario[j].getIdFuncionario());
+                                System.out.println("==========================");
+                            }
+                            System.out.println("Infomre o ID do fornecedor para excluir :");
+                            informarID = Ler.nextInt();
+
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
+
+                                if (funcionario[i].getIdFuncionario() == informarID) {
+
+                                    funcionario[i].ExcluirFuncionario();
+                                    i = tamanhoDoVetor;
+                                }
+
+                            }
                             break;
 
                         case 0:
+
                             break;
+
                     }
-
-                    break;
-
-                case 0:
-
                     break;
 
             }

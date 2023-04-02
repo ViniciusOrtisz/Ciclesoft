@@ -7,12 +7,11 @@ package com.mycompany.ciclesoft;
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class Fornecedores {
 
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
-    
+
     private int idFornecedor;
     public String nomeFornecedor;
     private int idProdutoFornecido;
@@ -35,19 +34,37 @@ public class Fornecedores {
         this.TelefoneFornecedor = TelefoneFornecedor;
     }
 
-    public void ExcluirFornecedor() {
-        this.idFornecedor = 0;
-        this.nomeFornecedor = "";
-        this.idProdutoFornecido = 0;
-        this.nomeProduto = "";
-        this.cnpjFornecedor = "";
-        this.notaFiscal = "";
-        this.emailFornecedor = "";
-        this.enderecoFornecedor = "";
-        this.TelefoneFornecedor = "";
+    public void CadastrarFornecedor() {
 
-        System.out.println("FORNECEDOR DELETADO");
+        System.out.println("O ID DO FORNECEDOR SERÁ:");
+        this.idFornecedor = random.nextInt(1000);
+        System.out.println(idFornecedor);
 
+        System.out.println("INFORME O NOME DO " + "FORNECEDOR" + " : ");
+        this.nomeFornecedor = Ler.next();
+
+        System.out.println("INFORME O ID DO PRODUTO");
+        this.idProdutoFornecido = Ler.nextInt();
+
+        System.out.println("INFORME O NOME DO PRODUTO DO " + "FORNECEDOR" + " :");
+        this.nomeProduto = Ler.next();
+
+        System.out.println("INFORME O CNPJ " + "FORNECEDOR" + " :");
+        this.cnpjFornecedor = Ler.next();
+
+        System.out.println("INFORME O A NOTA FISCAL DO " + "FORNECEDOR" + " :");
+        this.notaFiscal = Ler.next();
+
+        System.out.println("INFORME O EMAIL DO " + "FORNECEDOR" + " :");
+        this.emailFornecedor = Ler.next();
+
+        System.out.println("INFORME O ENDERECO DO " + "FORNECEDOR" + " :");
+        this.enderecoFornecedor = Ler.next();
+
+        System.out.println("INFORME O TELEFONE DO " + "FORNECEDOR" + " :");
+        this.TelefoneFornecedor = Ler.next();
+
+        System.out.println("CADASTRO REALIZADO COM SUCESSO");
     }
 
     public void AtualizarFornecedor() {
@@ -112,41 +129,22 @@ public class Fornecedores {
         }
 
     }
-    
-    public void CadastrarFornecedor() {
 
-        System.out.println("O ID DO FORNECEDOR SERÁ:");
-        this.idFornecedor = random.nextInt(1000);
-        System.out.println(idFornecedor);
+    public void ExcluirFornecedor() {
+        this.idFornecedor = 0;
+        this.nomeFornecedor = "";
+        this.idProdutoFornecido = 0;
+        this.nomeProduto = "";
+        this.cnpjFornecedor = "";
+        this.notaFiscal = "";
+        this.emailFornecedor = "";
+        this.enderecoFornecedor = "";
+        this.TelefoneFornecedor = "";
 
-        System.out.println("INFORME O NOME DO " + "FORNECEDOR" + " : ");
-        this.nomeFornecedor = Ler.next();
+        System.out.println("FORNECEDOR DELETADO");
 
-        System.out.println("INFORME O ID DO PRODUTO");
-        this.idProdutoFornecido = Ler.nextInt();
-
-        System.out.println("INFORME O NOME DO PRODUTO DO " + "FORNECEDOR" + " :");
-        this.nomeProduto = Ler.next();
-
-        System.out.println("INFORME O CNPJ " + "FORNECEDOR" + " :");
-        this.cnpjFornecedor = Ler.next();
-
-        System.out.println("INFORME O A NOTA FISCAL DO " + "FORNECEDOR" + " :");
-        this.notaFiscal = Ler.next();
-
-        System.out.println("INFORME O EMAIL DO " + "FORNECEDOR" + " :");
-        this.emailFornecedor = Ler.next();
-
-        System.out.println("INFORME O ENDERECO DO " + "FORNECEDOR" + " :");
-        this.enderecoFornecedor = Ler.next();
-
-        System.out.println("INFORME O TELEFONE DO " + "FORNECEDOR" + " :");
-        this.TelefoneFornecedor = Ler.next();
-
-        System.out.println("CADASTRO REALIZADO COM SUCESSO");
     }
 
-    
     public int getIdFornecedor() {
         return idFornecedor;
     }
@@ -219,7 +217,4 @@ public class Fornecedores {
         this.TelefoneFornecedor = TelefoneFornecedor;
     }
 
-    
-
-    
 }

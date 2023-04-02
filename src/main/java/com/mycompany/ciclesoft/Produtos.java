@@ -12,8 +12,8 @@ public class Produtos {
 
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
-
-    private int idProduto;
+    public Produtos produto[];
+    public int idProduto;
     private double valorVenda;
     private double valorCusto;
     public String modelo;
@@ -47,18 +47,20 @@ public class Produtos {
         this.peso = peso;
         this.cor = cor;
         this.aro = aro;
+        
     }
+
+    
 
     public void CadastrarProduto() {
         System.out.println("O ID DO PRODUTO SERÁ :");
         this.idProduto = random.nextInt(1000);
         System.out.println(idProduto + "");
 
-        System.out.println("INFORME O ID DO " + "PRODUTO" + " :");
-        this.idProduto = Ler.nextInt();
 
         System.out.println("INFORME O VALOR PARA VENDA");
-        this.valorVenda = Ler.nextDouble();
+        setValorVenda(Ler.nextDouble());
+        
 
         System.out.println("INFORME O CUSTO : ");
         this.valorCusto = Ler.nextDouble();
@@ -101,9 +103,8 @@ public class Produtos {
 
         System.out.println("INFORME O TAMANHO DO ARO :");
         this.aro = Ler.nextInt();
-
-        System.out.println("CADASTRO REALIZADO COM SUCESSO");
-
+        
+       
     }
 
     public void AtualizarProduto() {
@@ -238,15 +239,6 @@ public class Produtos {
 
         System.out.println("PRODUTO DELETADO");
 
-    }
-
-
-    public Scanner getLer() {
-        return Ler;
-    }
-
-    public void setLer(Scanner Ler) {
-        this.Ler = Ler;
     }
 
     public int getIdProduto() {

@@ -33,6 +33,7 @@ public class Cliente {
         this.estado = estado;
         this.cep = cep;
         this.telefone = telefone;
+        
     }
 
     public Cliente[] getCliente() {

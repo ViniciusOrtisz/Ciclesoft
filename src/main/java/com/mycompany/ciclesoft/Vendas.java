@@ -6,15 +6,16 @@ package com.mycompany.ciclesoft;
 
 import java.util.Scanner;
 
-public class Vendas {
-    
-    
-    public Scanner Ler = new Scanner(System.in);
-    
+import java.util.Random;
 
+public class Vendas extends Produtos {
+
+    Random random = new Random();
+    public Scanner Ler = new Scanner(System.in);
+    Produtos produto[];
     private String dataDaVenda;
     private int idCliente;
-    private int idProduto;
+    
     private int quantidade;
     private double valorUnitario;
     public double desconto;
@@ -22,11 +23,14 @@ public class Vendas {
     public int idFuncionario;
     public String formaDePagamento;
     public int idVenda;
-    
-    public Vendas(String dataDaVenda, int idCliente, int idProduto, int quantidade, double valorUnitario, double desconto, double valorTotalVenda, int idFuncionario, String formaDePagamento, int idVenda) {
+
+    //public Vendas(int idProduto, double valorVenda, double valorCusto, String modelo, int qntEstoque, String pneu, String freio, String pedaleira, String banco, String guidao, String quadro, String raio, String marcha, double peso, String cor, int aro, int idProduto,) {
+    public Vendas(int idProduto, double valorVenda, double valorCusto, String modelo, int qntEstoque, String pneu, String freio, String pedaleira, String banco, String guidao, String quadro, String raio, String marcha, double peso, String cor, int aro, String dataDaVenda, int idCliente, int quantidade, double valorUnitario, double desconto, double valorTotalVenda, int idFuncionario, String formaDePagamento, int idVenda) {
+        super(idProduto, valorVenda, valorCusto, modelo, qntEstoque, pneu, freio, pedaleira, banco, guidao, quadro, raio, marcha, peso, cor, aro);
+
         this.dataDaVenda = dataDaVenda;
         this.idCliente = idCliente;
-        this.idProduto = idProduto;
+
         this.quantidade = quantidade;
         this.valorUnitario = valorUnitario;
         this.desconto = desconto;
@@ -35,10 +39,39 @@ public class Vendas {
         this.formaDePagamento = formaDePagamento;
         this.idVenda = idVenda;
     }
-   
-    public void CadastrarVenda(){
-    
-    
+
+    public void CadastrarVenda() {
+        System.out.println("INFORME A DATA DA VENDA : ");
+        this.dataDaVenda = Ler.next();
+
+        System.out.println("INFORME O ID DO CLIENTE : ");
+        this.idCliente = Ler.nextInt();
+
+        System.out.println("INFORME O ID DO PRODUTO : ");
+        this.idProduto = Ler.nextInt();
+        
+        System.out.println("INFORME A QUANTIDADE : ");
+        this.quantidade = Ler.nextInt();
+
+        System.out.println("INFORME O VALOR UNITARIO : ");
+        this.valorUnitario = Ler.nextDouble();
+
+        System.out.println("INFORME O DESCONTO : ");
+        this.desconto = Ler.nextDouble();
+
+        this.valorTotalVenda = (valorUnitario * quantidade) - desconto;
+        System.out.println("VALOR TOTAL DA VENDA : " + valorTotalVenda);
+
+        System.out.println("INFORME O ID DO FUNCIONARIO : ");
+        this.idProduto = Ler.nextInt();
+
+        System.out.println("INFORME A FORMA DE PAGAMENTO");
+        this.formaDePagamento = Ler.next();
+
+        System.out.println("ID DA VENDA :");
+        this.idVenda = random.nextInt(1000);
+        System.out.println(idVenda);
+
     }
 
     public String getDataDaVenda() {
@@ -57,19 +90,14 @@ public class Vendas {
         this.idCliente = idCliente;
     }
 
-    public int getIdProduto() {
-        return idProduto;
-    }
 
-    public void setIdProduto(int idProduto) {
-        this.idProduto = idProduto;
-    }
 
     public int getQuantidade() {
         return quantidade;
     }
 
     public void setQuantidade(int quantidade) {
+
         this.quantidade = quantidade;
     }
 
@@ -120,6 +148,5 @@ public class Vendas {
     public void setIdVenda(int idVenda) {
         this.idVenda = idVenda;
     }
-
 
 }
