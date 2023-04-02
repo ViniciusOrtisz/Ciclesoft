@@ -157,7 +157,7 @@ public class Funcionarios {
 
             case 8:
                 System.out.println("DATA DE NASCIMENTO :");
-                this.dataNascimento = dataNascimento;
+                this.dataNascimento = Ler.next();
 
                 break;
             case 9:
