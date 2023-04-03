@@ -7,6 +7,9 @@ package com.mycompany.ciclesoft;
 import java.util.Scanner;
 import java.util.Random;
 
+//Analista: Maria
+//Desenvolvedor: Willyan
+
 public class Cliente {
 
     Random random = new Random();
