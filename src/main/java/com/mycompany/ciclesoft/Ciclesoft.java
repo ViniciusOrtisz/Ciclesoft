@@ -261,6 +261,36 @@ public class Ciclesoft {
 
                             }
                             break;
+                            
+                            
+                        case 4: 
+                            System.out.println("====RELATORIO FUNCINARIO====");
+
+                            System.out.println("LISTA DE FUNCINARIO");
+                            for (int j = 0; j < tamanhoDoVetor; j++) {
+                                System.out.println("ID : " + funcionario[j].getIdFuncionario());
+                                System.out.println("NOME : " + funcionario[j].getNome());
+                                System.out.println("CARGO : " + funcionario[j].getCargo());
+                                System.out.println("DATA ADMISSÃO : " + funcionario[j].getDataAdmissao());
+                                System.out.println("SÁLARIO : " + funcionario[j].getSalario());
+                                System.out.println("COMISSÃO : " + funcionario[j].getComissao());
+                                System.out.println("NUMERO DA CARTEIRA DE TRABALHO : " + funcionario[j].getnCarteiraTrabalho());
+                                System.out.println("DATA DE NASCIMENTO : " + funcionario[j].getDataNascimento());
+                                System.out.println("CPF : " + funcionario[j].getCpf());
+                                System.out.println("RG : " + funcionario[j].getRg());
+                                System.out.println("TELEFONE : " + funcionario[j].getTelefone());
+                                System.out.println("E-MAIL : " + funcionario[j].getEmail());
+                                System.out.println("ENDEREÇO : " + funcionario[j].getEndereco());
+                                System.out.println("BAIRRO : " + funcionario[j].getBairro());
+                                System.out.println("REFERENCIA : " + funcionario[j].getReferencia());
+                                System.out.println("CEP : " + funcionario[j].getCep());
+                                System.out.println("ESTADO : " + funcionario[j].getEstado());
+                                
+                                
+                                System.out.println("==========================");
+                            }
+                            
+                            break;
 
                         case 0:
 
