@@ -7,11 +7,9 @@ package com.mycompany.ciclesoft;
 import java.util.Random;
 import java.util.Scanner;
 
-
 // Classe : Funcionários
 // Analista Responsável: Erick
 // Desenvolvedor: Nathan
-
 public class Funcionarios {
 
     Random random = new Random();
@@ -75,7 +73,7 @@ public class Funcionarios {
         System.out.println("INFORME O NUMERO DA CERTEIRA DE TRABALHO :");
         this.nCarteiraTrabalho = Ler.next();
         System.out.println("DATA DE NASCIMENTO :");
-        this.dataNascimento = dataNascimento;
+        this.dataNascimento = Ler.next();
         System.out.println("INFORME O CPF :");
         this.cpf = Ler.next();
         System.out.println("INFORME O RG :");
@@ -144,7 +142,7 @@ public class Funcionarios {
                 break;
             case 4:
                 System.out.println("INFORME A DATA DE ADMISSÃO :");
-                this.rg = Ler.next();
+                this.dataAdmissao = Ler.next();
                 break;
             case 5:
                 System.out.println("INFORME O SALARIO :");
@@ -209,6 +207,8 @@ public class Funcionarios {
                 System.out.println("INFORME O ESTADO :");
                 this.estado = Ler.next();
                 break;
+                
+                
             case 0:
 
                 break;
