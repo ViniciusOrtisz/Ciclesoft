@@ -8,6 +8,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 
+// Classe : Funcionários
+// Analista Responsável: Erick
+// Desenvolvedor: Nathan
+
 public class Funcionarios {
 
     Random random = new Random();
