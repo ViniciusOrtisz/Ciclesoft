@@ -202,7 +202,7 @@ public class Ciclesoft {
                     opcaoClasses = scanner.nextInt();
                     switch (opcaoClasses) {
                         case 1:
-                            System.out.println("====CADASTRAR FUNCINARIO====");
+                            System.out.println("====CADASTRAR FUNCIONARIO====");
 
                             for (int i = 0; i < tamanhoDoVetor; i++) {
 
@@ -217,15 +217,15 @@ public class Ciclesoft {
                             }
                             break;
                         case 2:
-                            System.out.println("====EDITAR FUNCINARIO====");
+                            System.out.println("====EDITAR FUNCIONARIO====");
 
-                            System.out.println("LISTA DE FUNCIONARIOS");
+                            System.out.println("LISTA DE FUNCIONARIO");
                             for (int j = 0; j < tamanhoDoVetor; j++) {
                                 System.out.println("NOME : " + funcionario[j].getNome());
                                 System.out.println("ID : " + funcionario[j].getIdFuncionario());
                                 System.out.println("==========================");
                             }
-                            System.out.println("Infomre o ID do FUNCINARIO :");
+                            System.out.println("Infomre o ID do FUNCIONARIO :");
                             informarID = scanner.nextInt();
 
                             for (int i = 0; i < tamanhoDoVetor; i++) {
@@ -240,9 +240,9 @@ public class Ciclesoft {
 
                             break;
                         case 3:
-                            System.out.println("====EXCLUIR FUNCINARIO====");
+                            System.out.println("====EXCLUIR FUNCIONARIO====");
 
-                            System.out.println("LISTA DE FUNCINARIO");
+                            System.out.println("LISTA DE FUNCIONARIO");
                             for (int j = 0; j < tamanhoDoVetor; j++) {
                                 System.out.println("NOME : " + funcionario[j].getNome());
                                 System.out.println("ID : " + funcionario[j].getIdFuncionario());
@@ -264,7 +264,7 @@ public class Ciclesoft {
                             
                             
                         case 4: 
-                            System.out.println("====RELATORIO FUNCINARIO====");
+                            System.out.println("====RELATORIO FUNCIONARIO====");
 
                             System.out.println("LISTA DE FUNCINARIO");
                             for (int j = 0; j < tamanhoDoVetor; j++) {
