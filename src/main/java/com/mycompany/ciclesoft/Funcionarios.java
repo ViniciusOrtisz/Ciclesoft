@@ -131,84 +131,179 @@ public class Funcionarios {
             case 1:
                 System.out.println("INFORME O ID : ");
                 this.idFuncionario = Ler.nextInt();
-                break;
+
+                if (getIdFuncionario() == idFuncionario) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 2:
                 System.out.println("INFORME O NOME : ");
                 this.nome = Ler.next();
-                break;
+
+                if (getNome() == nome) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 3:
                 System.out.println("INFORME O CARGO ");
                 this.cargo = Ler.next();
-                break;
+
+                if (getNome() == nome) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 4:
                 System.out.println("INFORME A DATA DE ADMISSÃO :");
                 this.dataAdmissao = Ler.next();
+
+                if (getDataAdmissao() == dataAdmissao) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
                 break;
             case 5:
                 System.out.println("INFORME O SALARIO :");
                 this.salario = Ler.nextDouble();
-                break;
+
+                if (getSalario() == salario) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 6:
                 System.out.println("INFORME A COMISSÃO :");
                 this.comissao = Ler.nextDouble();
-                break;
+
+                if (getComissao() == comissao) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 7:
                 System.out.println("INFORME O NUMERO DA CERTEIRA DE TRABALHO :");
                 this.nCarteiraTrabalho = Ler.next();
+                if (getnCarteiraTrabalho() == nCarteiraTrabalho) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
                 break;
 
             case 8:
                 System.out.println("DATA DE NASCIMENTO :");
                 this.dataNascimento = Ler.next();
+                if (getDataNascimento() == dataNascimento) {
 
-                break;
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 9:
                 System.out.println("INFORME O CPF :");
                 this.cpf = Ler.next();
-                break;
+                if (getCpf() == cpf) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 10:
                 System.out.println("INFORME O RG :");
                 this.rg = Ler.next();
-                break;
+                if (getRg() == rg) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 11:
                 System.out.println("INFORME O TELEFONE :");
                 this.telefone = Ler.next();
-                break;
+
+                if (getTelefone() == telefone) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 12:
                 System.out.println("INFORME O EMAIL :");
                 this.email = Ler.next();
 
-                break;
+                if (getEmail() == email) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 13:
                 System.out.println("INFORME O ENDERECO :");
                 this.endereco = Ler.next();
-                break;
+
+                if (getEndereco() == endereco) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+                
             case 14:
                 System.out.println("INFORME O BAIRRO :");
                 this.bairro = Ler.next();
 
+                if (getBairro() == bairro) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+                
                 break;
             case 15:
                 System.out.println("INFORME ALGUMA REFERENCIA :");
                 this.referencia = Ler.next();
-                break;
+
+                if (getReferencia() == referencia) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
             case 16:
                 System.out.println("INFORME O CEP :");
                 this.cep = Ler.next();
 
-                break;
+                if (getCep() == cep) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
 
             case 17:
                 System.out.println("INFORME A CIDADE :");
                 this.cidade = Ler.next();
 
-                break;
+                if (getCidade() == cidade) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
             case 18:
                 System.out.println("INFORME O ESTADO :");
                 this.estado = Ler.next();
-                break;
-                
-                
+
+               if (getEstado() == estado) {
+
+                    System.out.println("==== CADASTRO ATUALIZADO ====");
+                    break;
+                }
+
             case 0:
 
                 break;
