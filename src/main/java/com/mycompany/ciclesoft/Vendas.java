@@ -4,6 +4,9 @@
  */
 package com.mycompany.ciclesoft;
 
+//Analista: Nathan
+//Desenvolvedor : Maria
+
 import java.util.Scanner;
 import java.util.Random;
 import java.util.Date;
