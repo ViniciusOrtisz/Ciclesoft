@@ -254,7 +254,7 @@ public class Funcionarios {
                     System.out.println("==== CADASTRO ATUALIZADO ====");
                     break;
                 }
-                
+
             case 14:
                 System.out.println("INFORME O BAIRRO :");
                 this.bairro = Ler.next();
@@ -264,7 +264,7 @@ public class Funcionarios {
                     System.out.println("==== CADASTRO ATUALIZADO ====");
                     break;
                 }
-                
+
                 break;
             case 15:
                 System.out.println("INFORME ALGUMA REFERENCIA :");
@@ -298,14 +298,14 @@ public class Funcionarios {
                 System.out.println("INFORME O ESTADO :");
                 this.estado = Ler.next();
 
-               if (getEstado() == estado) {
+                if (getEstado() == estado) {
 
                     System.out.println("==== CADASTRO ATUALIZADO ====");
                     break;
                 }
 
             case 0:
-
+                System.out.println("==== SAIR ====");
                 break;
 
         }
