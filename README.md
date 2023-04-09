@@ -42,13 +42,14 @@ Precisamos definir no menu, qual vai ser a ordem das operaçoes
 
 		[1] CLIENTES
 
+    	[1] VENDAS
+
     	[2] VENDAS
 
     	[3] PRODUTOS
 
-    	[4] FORNECEDOR
-
-    	[5] FUNCIONARIOS
-
-    	[6]
+    	[4] FORNECEDORES
+	
+	[5] FUNCIONARIOS
+    	
 
