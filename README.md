@@ -50,6 +50,6 @@ Precisamos definir no menu, qual vai ser a ordem das operaçoes
 
     	[4] FORNECEDORES
 	
-	[5] FUNCIONARIOS
+		[5] FUNCIONARIOS
     	
 
