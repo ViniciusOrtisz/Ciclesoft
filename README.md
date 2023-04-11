@@ -38,7 +38,7 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 
 
 # CLASSE MENU
-Precisamos definir no menu, qual vai ser a ordem das operaçoes
+
 
 		[1] CLIENTES
 
