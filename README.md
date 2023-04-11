@@ -15,18 +15,6 @@ de pedido, entre outros processos e por fim realizar a venda do produto para o c
 Apos a discução e criação das classes, foi atribuido a responsabilidade para cada membro cuidar de uma classe 
 ![image](https://user-images.githubusercontent.com/119326011/225166173-6f264939-7962-4d63-af4f-37fe6d7a75af.png)
 
-CLasse Menu
-
-Classe Cliente
-
-Classe Vendas - Responsavel por executar e apresentar relatorio de vendas
-
-Classe Produtos
-
-Classe Fornecedores
-
-Classe Funcionários
-
 
 Agora o proximo passo é fazer o Diagrama de Classes para cada Classe.
 
