@@ -40,14 +40,5 @@ https://app.diagrams.net/#G1pkzyiKCy4ROKPWk7GRoo-noety9sbJw1  ( link compartilha
 # CLASSE MENU
 
 
-		[1] CLIENTES
-
-    	[2] VENDAS
-
-    	[3] PRODUTOS
-
-    	[4] FORNECEDORES
-	
-		[5] FUNCIONARIOS
-    	
+		![image](https://user-images.githubusercontent.com/119326011/231303014-417afa04-f740-4eaf-8773-97f7af6c741f.png)
 
