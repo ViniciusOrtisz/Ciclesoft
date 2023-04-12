@@ -125,17 +125,17 @@ public class Produtos {
         System.out.println("-3- Valor de custo");
         System.out.println("-4- Modelo");
         System.out.println("-5- Quantidade em estoque");
-        System.out.println("-6- pneu");
-        System.out.println("-7- freio");
-        System.out.println("-8- pedaleira");
-        System.out.println("-9- banco");
+        System.out.println("-6- Pneu");
+        System.out.println("-7- Freio");
+        System.out.println("-8- Pedaleira");
+        System.out.println("-9- Banco");
         System.out.println("-10- Guidão");
         System.out.println("-11- Quadro");
         System.out.println("-12- Raio");
         System.out.println("-13- Marcha");
         System.out.println("-14- Peso");
         System.out.println("-15- Cor");
-        System.out.println("-16- Arp");
+        System.out.println("-16- Aro");
 
         while (!Ler.hasNextInt()) {
             System.out.print("Tente novamente, selecionando umas das opções acima");
@@ -146,80 +146,80 @@ public class Produtos {
         switch (opcao) {
 
             case 1:
-                System.out.println("Informe qual ID : ");
+                System.out.println("Informe o ID : ");
                 this.idProduto = Ler.nextInt();
                 break;
 
             case 2:
-                System.out.println("Informe qual o valor da venda : ");
+                System.out.println("Informe o valor da venda : ");
                 this.valorVenda = Ler.nextDouble();
                 break;
 
             case 3:
-                System.out.println("Informe qual o custo :");
+                System.out.println("Informe o custo :");
                 this.valorCusto = Ler.nextDouble();
                 break;
 
             case 4:
-                System.out.println("Informe qual o modelo :");
+                System.out.println("Informe o modelo :");
                 this.modelo = Ler.next();
                 break;
 
             case 5:
-                System.out.println("Informe qual a quantidade em estoque :");
+                System.out.println("Informe a quantidade em estoque :");
                 this.quantidadeEstoque = Ler.nextInt();
                 break;
 
             case 6:
-                System.out.println("Informe qual é o pneu :");
+                System.out.println("Informe o pneu :");
                 this.pneu = Ler.next();
                 break;
 
             case 7:
-                System.out.println("Informe qual é o freio :");
+                System.out.println("Informe o freio :");
                 this.freio = Ler.next();
                 break;
             case 8:
-                System.out.println("Informe qual é a pedaleira :");
+                System.out.println("Informe a pedaleira :");
                 this.pedaleira = Ler.next();
                 break;
 
             case 9:
-                System.out.println("Informe qual é o banco :");
+                System.out.println("Informe o banco :");
                 this.banco = Ler.next();
                 break;
 
             case 10:
-                System.out.println("Informe qual é o guidão :");
+                System.out.println("Informe o guidão :");
                 this.guidao = Ler.next();
                 break;
 
             case 11:
-                System.out.println("Informe qual é o quadro :");
+                System.out.println("Informe o quadro :");
                 this.quadro = Ler.next();
                 break;
 
             case 12:
-                System.out.println("Informe qual é o raio :");
+                System.out.println("Informe o raio :");
                 this.raio = Ler.next();
                 break;
 
             case 13:
-                System.out.println("Informe qual é a marcha :");
+                System.out.println("Informe a marcha :");
                 this.marcha = Ler.next();
                 break;
 
             case 14:
-                System.out.println("Informe qual é o peso :");
+                System.out.println("Informe o peso :");
                 this.peso = Ler.nextInt();
                 break;
 
             case 15:
-                System.out.println("Informe qual é a cor :");
+                System.out.println("Informe a cor :");
                 this.cor = Ler.next();
                 break;
             case 16:
-                System.out.println("Informe qual é o aro :");
+                System.out.println("Informe o aro :");
                 this.aro = Ler.nextInt();
                 break;
             case 0:
@@ -381,4 +381,3 @@ public class Produtos {
     }
 
 }
-
