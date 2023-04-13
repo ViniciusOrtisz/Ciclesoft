@@ -28,6 +28,7 @@ public class Funcionarios {
     public String nCarteiraTrabalho;
     public String dataNascimento;
     public String cpf;
+    public String cpfFormatador;
     public String rg;
     public String telefone;
     public String email;
@@ -104,9 +105,9 @@ public class Funcionarios {
 
                     consultarTodos();
                     break;
-                    
+
                 case 0:
-                    
+
                     opcaoWhile = 0;
                     break;
 
@@ -136,7 +137,7 @@ public class Funcionarios {
             System.out.println("CEP : " + funcionarios.getCep());
             System.out.println("CIDADE : " + funcionarios.getCidade());
             System.out.println("ESTADO : " + funcionarios.getEstado());
-            
+
             System.out.println("========================");
         }
     }
@@ -152,28 +153,30 @@ public class Funcionarios {
 
                 System.out.println("INFORME O NOME DO FUNCIONARIO ");
                 funcionarios.setNome(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME O CARGO ");
-                funcionarios.setCargo(Ler.next());
+                funcionarios.setCargo(Ler.nextLine());
 
                 System.out.println("INFORME A DATA DE ADMISSÃO :");
-                funcionarios.setDataAdmissao(Ler.next());
+                funcionarios.setDataAdmissao(Ler.nextLine());
 
                 System.out.println("INFORME O SALARIO :");
                 funcionarios.setSalario(Ler.nextDouble());
 
                 System.out.println("INFORME A COMISSÃO :");
                 funcionarios.setComissao(Ler.nextDouble());
-
+                Ler.nextLine();
                 System.out.println("INFORME O NUMERO DA CERTEIRA DE TRABALHO :");
-                funcionarios.setnCarteiraTrabalho(Ler.next());
+                funcionarios.setnCarteiraTrabalho(Ler.nextLine());
 
                 System.out.println("DATA DE NASCIMENTO :");
                 funcionarios.setDataNascimento(Ler.next());
 
+                Ler.nextLine();
                 System.out.println("INFORME O CPF ( apenas numeros ):");
-                funcionarios.setCpf(Ler.next());
-                cpf_formatado(funcionarios.getCpf());
+                cpfFormatador = Ler.next();
+
+                funcionarios.setCpf(cpf_formatado(cpfFormatador));
                 System.out.println(funcionarios.getCpf());
 
                 System.out.println("INFORME O RG ( apenas numeros ):");
@@ -183,28 +186,28 @@ public class Funcionarios {
 
                 System.out.println("INFORME O TELEFONE :");
                 funcionarios.setTelefone(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME O EMAIL :");
                 funcionarios.setEmail(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME O ENDERECO :");
                 funcionarios.setEndereco(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME O BAIRRO :");
                 funcionarios.setBairro(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME ALGUMA REFERENCIA :");
                 funcionarios.setReferencia(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME O CEP (apenas numeros):");
                 funcionarios.setCep(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME A CIDADE :");
                 funcionarios.setCidade(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("INFORME O ESTADO :");
                 funcionarios.setEstado(Ler.next());
-
+                Ler.nextLine();
                 System.out.println("CADASTRO REALIZADO COM SUCESSO");
 
                 break;
@@ -247,9 +250,9 @@ public class Funcionarios {
                 switch (opcao) {
 
                     case 1:
+                        System.out.println("INFORME O ID ");
                         funcionarios.setIdFuncionario(Ler.nextInt());
-                        System.out.println("ID DO FUNCIONARIO SERA " + funcionarios.getIdFuncionario());
-
+                       
                         System.out.println("==== CADASTRO ATUALIZADO ====");
                         break;
 
@@ -548,10 +551,10 @@ public class Funcionarios {
         this.estado = estado;
     }
 
-    public void cpf_formatado(String cpf) {
+    public String cpf_formatado(String cpf) {
         cpf = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9, 11);
 
-        this.cpf = cpf;
+        return cpf;
 
     }
 
