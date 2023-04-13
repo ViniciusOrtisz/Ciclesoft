@@ -12,7 +12,7 @@ de pedido, entre outros processos e por fim realizar a venda do produto para o c
 
 # CLASSES 
 
-Apos a discução e criação das classes, foi atribuido a responsabilidade para cada membro cuidar de uma classe 
+Apos a discução e criação das classes, foi atribuido a responsabilidade para cada membro cuidar de uma classe
 ![image](https://user-images.githubusercontent.com/119326011/225166173-6f264939-7962-4d63-af4f-37fe6d7a75af.png)
 
 
