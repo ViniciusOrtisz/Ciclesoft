@@ -11,12 +11,7 @@ public class Ciclesoft {
         Scanner scanner = new Scanner(System.in);
         int informarID;
 
-        Funcionarios[] funcionario = new Funcionarios[tamanhoDoVetor];
-
-        for (int i = 0; i < tamanhoDoVetor; i++) {
-
-            funcionario[i] = new Funcionarios(0, "", "", "", 0, 0, "", "", "", "", "", "", "", "", "", "", "", "");
-        }
+        Funcionarios IniciarFuncionario = new Funcionarios();
 
         Fornecedores[] fornecedor = new Fornecedores[tamanhoDoVetor];
 
@@ -324,7 +319,7 @@ public class Ciclesoft {
                             break;
 
                         case 0:
-
+                            
                             break;
 
                     }
@@ -412,91 +407,15 @@ public class Ciclesoft {
                     break;
 
                 case 5:
-                    System.out.println("xxxxxxxx MENU FUNCIONARIO xxxxxxxx");
+                    
+                    IniciarFuncionario.menuFuncionario();
 
-                    System.out.println("[1]CADASTRAR NOVO FUNCIONARIO");
-                    System.out.println("[2]EDITAR FUNCIONARIO");
-                    System.out.println("[3]EXCLUIR FUNCIONARIO");
-                    System.out.println("[0]SAIR");
-
-                    while (!scanner.hasNextInt()) {
-                        System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                        scanner.next();
-                    }
-                    opcaoClasses = scanner.nextInt();
-                    switch (opcaoClasses) {
-                        case 1:
-                            System.out.println("====CADASTRAR FUNCIONARIO====");
-
-                            for (int i = 0; i < tamanhoDoVetor; i++) {
-
-                                if (funcionario[i].getIdFuncionario() == 0) {
-                                    System.out.println("Vetor disponivel > " + i);
-                                    funcionario[i].CadastrarFuncionario();
-                                    i = tamanhoDoVetor;
-
-                                    break;
-
-                                }
-                            }
-                            break;
-                        case 2:
-                            System.out.println("====EDITAR FUNCIONARIO====");
-
-                            System.out.println("LISTA DE FUNCIONARIOS");
-                            for (int j = 0; j < tamanhoDoVetor; j++) {
-                                System.out.println("NOME : " + funcionario[j].getNome());
-                                System.out.println("ID : " + funcionario[j].getIdFuncionario());
-                                System.out.println("==========================");
-                            }
-                            System.out.println("Infomre o ID do FUNCIONARIO :");
-                            informarID = scanner.nextInt();
-
-                            for (int i = 0; i < tamanhoDoVetor; i++) {
-
-                                if (funcionario[i].getIdFuncionario() == informarID) {
-
-                                    funcionario[i].AtualizarFuncionario();
-                                    i = tamanhoDoVetor;
-                                }
-
-                            }
-
-                            break;
-                        case 3:
-                            System.out.println("====EXCLUIR FUNCINARIO====");
-
-                            System.out.println("LISTA DE FUNCINARIO");
-                            for (int j = 0; j < tamanhoDoVetor; j++) {
-                                System.out.println("NOME : " + funcionario[j].getNome());
-                                System.out.println("ID : " + funcionario[j].getIdFuncionario());
-                                System.out.println("==========================");
-                            }
-                            System.out.println("Infomre o ID do FUNCIONARIO para excluir :");
-                            informarID = scanner.nextInt();
-
-                            for (int i = 0; i < tamanhoDoVetor; i++) {
-
-                                if (funcionario[i].getIdFuncionario() == informarID) {
-
-                                    funcionario[i].ExcluirFuncionario();
-                                    i = tamanhoDoVetor;
-                                }
-
-                            }
-                            break;
-
-                        case 0:
-
-                            break;
-
-                    }
                     break;
 
             }
 
-        } while (opcao
-                != 0);
+        } while (opcao!= 0);
+                
     }
 
 }
