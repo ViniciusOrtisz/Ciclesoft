@@ -28,14 +28,16 @@ public class Funcionarios {
     public String nCarteiraTrabalho;
     public String dataNascimento;
     public String cpf;
-    public String cpfFormatador;
+    public String cpfParaFormatar;
     public String rg;
+    public String rgParaFormatar;
     public String telefone;
     public String email;
     public String endereco;
     public String bairro;
     public String referencia;
     public String cep;
+    public String cepParaFormatar;
     public String cidade;
     public String estado;
 
@@ -89,27 +91,20 @@ public class Funcionarios {
             int opcaoSwitch = Ler.nextInt();
             switch (opcaoSwitch) {
 
-                case 1:
+                case 1 ->
                     CadastrarFuncionario();
-                    break;
 
-                case 2:
+                case 2 ->
                     AtualizarFuncionario();
-                    break;
 
-                case 3:
+                case 3 ->
                     ExcluirFuncionario();
-                    break;
 
-                case 4:
-
+                case 4 ->
                     consultarTodos();
-                    break;
 
-                case 0:
-
+                case 0 ->
                     opcaoWhile = 0;
-                    break;
 
             }
 
@@ -173,20 +168,18 @@ public class Funcionarios {
                 funcionarios.setDataNascimento(Ler.next());
 
                 Ler.nextLine();
-                System.out.println("INFORME O CPF ( apenas numeros ):");
-                cpfFormatador = Ler.next();
-
-                funcionarios.setCpf(cpf_formatado(cpfFormatador));
+                System.out.println("INFORME O CPF ( apenas numeros , 11 numeros):");
+                funcionarios.setCpf(cpf_formatador(cpfParaFormatar = Ler.next()));
                 System.out.println(funcionarios.getCpf());
 
-                System.out.println("INFORME O RG ( apenas numeros ):");
-                funcionarios.setRg(Ler.next());
-                rg_formatado(funcionarios.getRg());
+                System.out.println("INFORME O RG ( apenas numeros, 10 numeros ):");
+                funcionarios.setRg(rg_formatador(rgParaFormatar = Ler.next()));
                 System.out.println(funcionarios.getRg());
+
+                Ler.nextLine();
 
                 System.out.println("INFORME O TELEFONE :");
                 funcionarios.setTelefone(Ler.next());
-                Ler.nextLine();
                 System.out.println("INFORME O EMAIL :");
                 funcionarios.setEmail(Ler.next());
                 Ler.nextLine();
@@ -199,9 +192,13 @@ public class Funcionarios {
                 System.out.println("INFORME ALGUMA REFERENCIA :");
                 funcionarios.setReferencia(Ler.next());
                 Ler.nextLine();
-                System.out.println("INFORME O CEP (apenas numeros):");
-                funcionarios.setCep(Ler.next());
+
+                System.out.println("INFORME O CEP (apenas numeros, 7 numeros):");
+                funcionarios.setCep(cep_formatador(cepParaFormatar = Ler.next()));
+                System.out.println(funcionarios.getCep());
+
                 Ler.nextLine();
+
                 System.out.println("INFORME A CIDADE :");
                 funcionarios.setCidade(Ler.next());
                 Ler.nextLine();
@@ -252,7 +249,7 @@ public class Funcionarios {
                     case 1:
                         System.out.println("INFORME O ID ");
                         funcionarios.setIdFuncionario(Ler.nextInt());
-                       
+
                         System.out.println("==== CADASTRO ATUALIZADO ====");
                         break;
 
@@ -307,20 +304,17 @@ public class Funcionarios {
 
                     case 9:
                         System.out.println("INFORME O CPF :");
-                        funcionarios.setCpf(Ler.next());
-                        cpf_formatado(cpf);
-                        System.out.println(cpf);
-
+                        funcionarios.setCpf(cpf_formatador(cpfParaFormatar = Ler.next()));
+                        System.out.println(getCpf());
                         System.out.println("==== CADASTRO ATUALIZADO ====");
                         break;
 
                     case 10:
                         System.out.println("INFORME O RG :");
-                        funcionarios.setRg(Ler.next());
-
-                        rg_formatado(rg);
-                        System.out.println(rg);
+                        funcionarios.setRg(rg_formatador(rgParaFormatar = Ler.next()));
+                        System.out.println(getRg());
                         System.out.println("==== CADASTRO ATUALIZADO ====");
+
                         break;
 
                     case 11:
@@ -360,7 +354,8 @@ public class Funcionarios {
 
                     case 16:
                         System.out.println("INFORME O CEP :");
-                        funcionarios.setCep(Ler.next());
+                        funcionarios.setCep(cep_formatador(cepParaFormatar = Ler.next()));
+                        System.out.println(getCep());
 
                         System.out.println("==== CADASTRO ATUALIZADO ====");
                         break;
@@ -368,20 +363,21 @@ public class Funcionarios {
                     case 17:
                         System.out.println("INFORME A CIDADE :");
                         funcionarios.setCidade(Ler.nextLine());
-
                         System.out.println("==== CADASTRO ATUALIZADO ====");
+
                         break;
 
                     case 18:
                         System.out.println("INFORME O ESTADO :");
                         funcionarios.setEstado(Ler.nextLine());
-
                         System.out.println("==== CADASTRO ATUALIZADO ====");
+
                         break;
 
                     case 0:
                         System.out.println("==== SAIR ====");
-                        opcaoWhile = 0;
+                        opcaoWhile = 0; //finaliza o metodod
+
                         break;
 
                 }
@@ -551,15 +547,20 @@ public class Funcionarios {
         this.estado = estado;
     }
 
-    public String cpf_formatado(String cpf) {
+    public String cpf_formatador(String cpf) {
         cpf = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9, 11);
 
         return cpf;
 
     }
 
-    public void rg_formatado(String rg) {
+    public String rg_formatador(String rg) {
         rg = rg.substring(0, 2) + "." + rg.substring(2, 5) + "." + rg.substring(5, 8) + "-" + rg.substring(8, 10);
-        this.rg = rg;
+        return rg;
+    }
+
+    public String cep_formatador(String cep) {
+        cep = cep.substring(0, 5) + "-" + cep.substring(5, 8);
+        return cep;
     }
 }
