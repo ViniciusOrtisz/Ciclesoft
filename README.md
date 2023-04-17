@@ -1,4 +1,4 @@
-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
+Esse projeto é um trabalho de estudo de Poo de Primeiro ano do curso de ADS.
 
 
 # Ciclesoft - Sistema de Vendas de Bicicletas
