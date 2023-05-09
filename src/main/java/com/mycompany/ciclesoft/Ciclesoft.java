@@ -270,7 +270,7 @@ public class Ciclesoft {
 
                                 if (produto[i].getIdProduto() == 0) {
                                     System.out.println("Vetor disponivel > " + i);
-                                    produto[i].CadastrarProduto();
+                                    produto[i].cadastrarProduto();
                                     i = tamanhoDoVetor;
 
                                     break;
@@ -292,7 +292,7 @@ public class Ciclesoft {
 
                                 if (produto[i].getIdProduto() == informarID) {
 
-                                    produto[i].AtualizarOProduto();
+                                    produto[i].atualizarProduto();
                                     i = tamanhoDoVetor;
                                 }
 
@@ -311,7 +311,7 @@ public class Ciclesoft {
 
                                 if (produto[i].getIdProduto() == informarID) {
 
-                                    produto[i].ExcluirOProduto();
+                                    produto[i].excluirProduto();
                                     i = tamanhoDoVetor;
                                 }
 
@@ -319,7 +319,7 @@ public class Ciclesoft {
                             break;
 
                         case 0:
-                            
+
                             break;
 
                     }
@@ -346,7 +346,7 @@ public class Ciclesoft {
 
                                 if (fornecedor[i].getIdFornecedor() == 0) {
                                     System.out.println("Vetor disponivel > " + i);
-                                    fornecedor[i].CadastrarFornecedor();
+                                    fornecedor[i].cadastrarFornecedor();
                                     i = tamanhoDoVetor;
 
                                     break;
@@ -370,7 +370,7 @@ public class Ciclesoft {
 
                                 if (fornecedor[i].getIdFornecedor() == informarID) {
 
-                                    fornecedor[i].AtualizarFornecedor();
+                                    fornecedor[i].atualizarFornecedor();
                                     i = tamanhoDoVetor;
                                 }
 
@@ -392,7 +392,7 @@ public class Ciclesoft {
 
                                 if (fornecedor[i].getIdFornecedor() == informarID) {
 
-                                    fornecedor[i].ExcluirFornecedor();
+                                    fornecedor[i].excluirFornecedor();
                                     i = tamanhoDoVetor;
                                 }
 
@@ -407,15 +407,15 @@ public class Ciclesoft {
                     break;
 
                 case 5:
-                    
+
                     IniciarFuncionario.menuFuncionario();
 
                     break;
 
             }
 
-        } while (opcao!= 0);
-                
+        } while (opcao != 0);
+
     }
 
 }

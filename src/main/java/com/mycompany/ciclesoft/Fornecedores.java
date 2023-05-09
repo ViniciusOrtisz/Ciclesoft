@@ -4,14 +4,13 @@
  */
 package com.mycompany.ciclesoft;
 
-import java.util.Random;
-import java.util.Scanner;
-
-
 // Classe : Fornecedores
 // Analista Responsável: Willyan
 // Desenvolvedor: Vinicius
+// Refatorado: Felipe Koji
 
+import java.util.Random;
+import java.util.Scanner;
 
 public class Fornecedores {
 
@@ -29,8 +28,6 @@ public class Fornecedores {
     public String telefoneFornecedor;
     public String origemProduto;
 
-   
-
     public Fornecedores(int aidFornecedor, String anomeFornecedor, int aidProduto, String anomeProduto, String acnpjFornecedor, String anotaFiscal, String aemailFornecedor, String aenderecoFornecedor, String atelefoneFornecedor, String aorigemProduto) {
         this.idFornecedor = aidFornecedor;
         this.nomeFornecedor = anomeFornecedor;
@@ -44,121 +41,79 @@ public class Fornecedores {
         this.origemProduto = aorigemProduto;
     }
 
-    public void CadastrarFornecedor() {
-
+    public void cadastrarFornecedor() {
         System.out.println("Código Identificador do Fornecedor:");
         this.idFornecedor = random.nextInt(1000);
         System.out.println(idFornecedor);
-
         System.out.println("Informe o nome do "  + "Fornecedor" + " : ");
         this.nomeFornecedor = Ler.next();
-
         System.out.println("Informe o Código do Produto");
         this.idProduto = Ler.nextInt();
-
         System.out.println("Informe o nome do Produto :");
         this.nomeProduto = Ler.next();
-
         System.out.println("Informe o CPNJ " + "do Fornecedor" + " :");
         this.cnpjFornecedor = Ler.next();
-
         System.out.println("Informe a Nota Fiscal :");
         this.notaFiscal = Ler.next();
-
         System.out.println("Informe o e-mail do " + "Fornecedor" + " :");
         this.emailFornecedor = Ler.next();
-
         System.out.println("Informe o endereco do " + "Fornecedor" + " :");
         this.enderecoFornecedor = Ler.next();
-
         System.out.println("Informe o Telefone do  " + "Fornecedor" + " :");
         this.telefoneFornecedor = Ler.next();
-        
         System.out.println("Informe a Origem do Produto do " + "Fornecedor" + " :");
         this.origemProduto = Ler.next();
-
         System.out.println("Cadastro de Fornecedor Realizado");
     }
-
-    public void AtualizarFornecedor() {
-
-        System.out.println("[1]Código Fornecedor");
-        
+    public void textoAtualizarFornecedor() {
+        System.out.println("[1]Código Fornecedor"); 
         System.out.println("[2]Nome Fornecedor");
-        
         System.out.println("[3]Código do Produto");
-        
         System.out.println("[4]Nome do Produto");
-        
         System.out.println("[5]CNPJ");
-        
         System.out.println("[6]Nota Fiscal");
-        
         System.out.println("[7]e-mail");
-        
         System.out.println("[8]Endereço do Fornecedor");
-        
         System.out.println("[9]Telefone do Fornecedor");
-        
         System.out.println("[10]Origem do Produto");
-        
+    }
+    public void lacoAtualizarFornecedor() {
+         textoAtualizarFornecedor();
         while (!Ler.hasNextInt()) {
             System.out.print("Tente novamente escolhendo uma das opcoes acima");
             Ler.next(); //
         }
-
+    }
+    public void atualizarFornecedor() {
+        textoAtualizarFornecedor();
+        lacoAtualizarFornecedor();
         int opcao = Ler.nextInt();
         switch (opcao) {
-
-            case 1:
-                System.out.println("Informe o Código do Fornecedor: ");
-                this.idFornecedor = Ler.nextInt();
-                break;
-            case 2:
-                System.out.println("Informe o nome do Fornecedor : ");
-                this.nomeFornecedor = Ler.next();
-                break;
-            case 3:
-                System.out.println("Informe o Código do Produto");
-                this.idProduto = Ler.nextInt();
-                break;
-            case 4:
-                System.out.println("Informe o nome do Produto :");
-                this.nomeProduto = Ler.next();
-                break;
-            case 5:
-                System.out.println("Informe o CNPJ do Fornecedor:");
-                this.cnpjFornecedor = Ler.next();
-                break;
-            case 6:
-                System.out.println("Informe a Nota Fiscal :");
-                this.notaFiscal = Ler.next();
-                break;
-            case 7:
-                System.out.println("Informe o e-mail do Fornecedor :");
-                this.emailFornecedor = Ler.next();
-                break;
-            case 8:
-                System.out.println("Informe o Endereço do Fornecedor :");
-                this.enderecoFornecedor = Ler.next();
-                break;
-            case 9:
-                System.out.println("Informe o Telefone do Fornecedor:");
-                this.telefoneFornecedor = Ler.next();
-                break;
-            case 10:
-                System.out.println("Informe a Origem do Produto :");
-                this.origemProduto = Ler.next();
-                break;
-            case 0:
-
-                break;
-
+            case 1 -> {System.out.println("Informe o Código do Fornecedor: ");
+                this.idFornecedor = Ler.nextInt();}
+            case 2 -> {System.out.println("Informe o nome do Fornecedor : ");
+                this.nomeFornecedor = Ler.next();}
+            case 3 -> {System.out.println("Informe o Código do Produto");
+                this.idProduto = Ler.nextInt();}
+            case 4 -> {System.out.println("Informe o nome do Produto :");
+                this.nomeProduto = Ler.next();}
+            case 5 -> {System.out.println("Informe o CNPJ do Fornecedor:");
+                this.cnpjFornecedor = Ler.next();}
+            case 6 -> {System.out.println("Informe a Nota Fiscal :");
+                this.notaFiscal = Ler.next();}
+            case 7 -> {System.out.println("Informe o e-mail do Fornecedor :");
+                this.emailFornecedor = Ler.next();}
+            case 8 -> {System.out.println("Informe o Endereço do Fornecedor :");
+                this.enderecoFornecedor = Ler.next();}
+            case 9 -> {System.out.println("Informe o Telefone do Fornecedor:");
+                this.telefoneFornecedor = Ler.next();}
+            case 10 -> {System.out.println("Informe a Origem do Produto :");
+                this.origemProduto = Ler.next();}
+            case 0 -> {
+            }
         }
-
     }
-
-    public void ExcluirFornecedor() {
+    public void excluirFornecedor() {
         this.idFornecedor = 0;
         this.nomeFornecedor = "";
         this.idProduto = 0;
@@ -168,9 +123,7 @@ public class Fornecedores {
         this.emailFornecedor = "";
         this.enderecoFornecedor = "";
         this.telefoneFornecedor = "";
-
         System.out.println("Registro de Fornecedor Apagado");
-
     }
 
     public int getIdFornecedor() {

@@ -1,12 +1,11 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.ciclesoft;
 
 //Analista Vinicius
 //Desenvolvedor: Erick
-
+// Refatorado: Pedro Rodrigues
 /**
  *
  * @author erick
@@ -14,10 +13,8 @@ package com.mycompany.ciclesoft;
 /*
  *
  */
-
 import java.util.Random;
 import java.util.Scanner;
-
 
 public class Produtos {
 
@@ -58,68 +55,52 @@ public class Produtos {
         this.peso = peso;
         this.cor = cor;
         this.aro = aro;
-        
+
     }
 
-    
-
-    public void CadastrarProduto() {
+    public void cadastrarProduto() {
         System.out.println("ID do produto a ser cadastrado :");
         this.idProduto = random.nextInt(1000);
         System.out.println(idProduto + "");
-
-
         System.out.println("Informe qual é o valor de venda do produto");
         setValorVenda(Ler.nextDouble());
-        
-
         System.out.println("Informe qual é o custo do produto : ");
         this.valorCusto = Ler.nextDouble();
-
         System.out.println("Informe qual é o modelo do produto : ");
         this.modelo = Ler.next();
-
         System.out.println("Informe a quantidade em estoque :");
         this.quantidadeEstoque = Ler.nextInt();
-
         System.out.println("Informe qual a descrição do pneu :");
         this.pneu = Ler.next();
-
         System.out.println("Informe qual a descrição do freio :");
         this.freio = Ler.next();
-
         System.out.println("Informe qual a descrição da pedaleira :");
         this.pedaleira = Ler.next();
-
         System.out.println("Informe qual a descrição do banco :");
         this.banco = Ler.next();
-
         System.out.println("Informe qual a descrição do guidão :");
         this.guidao = Ler.next();
-
         System.out.println("Informe qual a descrição do quadro :");
         this.quadro = Ler.next();
-
         System.out.println("Informe qual a descrição do raio :");
         this.raio = Ler.next();
-
         System.out.println("Informe qual a descrição da marcha :");
         this.marcha = Ler.next();
-
         System.out.println("Informe o peso do produto :");
         this.peso = Ler.nextDouble();
-
         System.out.println("Informe a cor do Produto :");
         this.cor = Ler.next();
-
         System.out.println("Informe qual é o tamanho do aro :");
         this.aro = Ler.nextInt();
-        
-       
+    }
+    public void atualizacaoProtudo() {
+         while (!Ler.hasNextInt()) {
+            System.out.print("Tente novamente, selecionando umas das opções acima");
+            Ler.next(); 
+        }
     }
 
-    public void AtualizarOProduto() {
-
+    public void textoAtualizarProduto() {
         System.out.println("-1- ID");
         System.out.println("-2- Valor de venda");
         System.out.println("-3- Valor de custo");
@@ -136,101 +117,51 @@ public class Produtos {
         System.out.println("-14- Peso");
         System.out.println("-15- Cor");
         System.out.println("-16- Aro");
+    }
 
-        while (!Ler.hasNextInt()) {
-            System.out.print("Tente novamente, selecionando umas das opções acima");
-            Ler.next(); //
-        }
-
+    public void atualizarProduto() {
+        textoAtualizarProduto();
+        atualizacaoProtudo();
         int opcao = Ler.nextInt();
         switch (opcao) {
-
-            case 1:
-                System.out.println("Informe o ID : ");
-                this.idProduto = Ler.nextInt();
-                break;
-
-            case 2:
-                System.out.println("Informe o valor da venda : ");
-                this.valorVenda = Ler.nextDouble();
-                break;
-
-            case 3:
-                System.out.println("Informe o custo :");
-                this.valorCusto = Ler.nextDouble();
-                break;
-
-            case 4:
-                System.out.println("Informe o modelo :");
-                this.modelo = Ler.next();
-                break;
-
-            case 5:
-                System.out.println("Informe a quantidade em estoque :");
-                this.quantidadeEstoque = Ler.nextInt();
-                break;
-
-            case 6:
-                System.out.println("Informe o pneu :");
-                this.pneu = Ler.next();
-                break;
-
-            case 7:
-                System.out.println("Informe o freio :");
-                this.freio = Ler.next();
-                break;
-            case 8:
-                System.out.println("Informe a pedaleira :");
-                this.pedaleira = Ler.next();
-                break;
-
-            case 9:
-                System.out.println("Informe o banco :");
-                this.banco = Ler.next();
-                break;
-
-            case 10:
-                System.out.println("Informe o guidão :");
-                this.guidao = Ler.next();
-                break;
-
-            case 11:
-                System.out.println("Informe o quadro :");
-                this.quadro = Ler.next();
-                break;
-
-            case 12:
-                System.out.println("Informe o raio :");
-                this.raio = Ler.next();
-                break;
-
-            case 13:
-                System.out.println("Informe a marcha :");
-                this.marcha = Ler.next();
-                break;
-
-            case 14:
-                System.out.println("Informe o peso :");
-                this.peso = Ler.nextInt();
-                break;
-
-            case 15:
-                System.out.println("Informe a cor :");
-                this.cor = Ler.next();
-                break;
-            case 16:
-                System.out.println("Informe o aro :");
-                this.aro = Ler.nextInt();
-                break;
-            case 0:
-
-                break;
-
+            case 1 -> {System.out.println("Informe o ID : ");
+                this.idProduto = Ler.nextInt();}
+            case 2 -> {System.out.println("Informe o valor da venda : ");
+                this.valorVenda = Ler.nextDouble();}
+            case 3 -> {System.out.println("Informe o custo :");
+                this.valorCusto = Ler.nextDouble();}
+            case 4 -> {System.out.println("Informe o modelo :");
+                this.modelo = Ler.next();}
+            case 5 -> {System.out.println("Informe a quantidade em estoque :");
+                this.quantidadeEstoque = Ler.nextInt();}
+            case 6 -> {System.out.println("Informe o pneu :");
+                this.pneu = Ler.next();}
+            case 7 -> {System.out.println("Informe o freio :");
+                this.freio = Ler.next();}
+            case 8 -> {System.out.println("Informe a pedaleira :");
+                this.pedaleira = Ler.next();}
+            case 9 -> {System.out.println("Informe o banco :");
+                this.banco = Ler.next();}
+            case 10 -> {System.out.println("Informe o guidão :");
+                this.guidao = Ler.next();}
+            case 11 -> {System.out.println("Informe o quadro :");
+                this.quadro = Ler.next();}
+            case 12 -> {System.out.println("Informe o raio :");
+                this.raio = Ler.next();}
+            case 13 -> {System.out.println("Informe a marcha :");
+                this.marcha = Ler.next();}
+            case 14 -> {System.out.println("Informe o peso :");
+                this.peso = Ler.nextInt();}
+            case 15 -> {System.out.println("Informe a cor :");
+                this.cor = Ler.next();}
+            case 16 -> {System.out.println("Informe o aro :");
+                this.aro = Ler.nextInt();}
+            case 0 -> {
+            }
         }
-
     }
-    
-    public void ExcluirOProduto() {
+
+    public void excluirProduto() {
         this.idProduto = 0;
         this.valorVenda = 0;
         this.valorCusto = 0;
@@ -247,9 +178,7 @@ public class Produtos {
         this.peso = 0;
         this.cor = "";
         this.aro = 0;
-
         System.out.println("Produto excluido com sucesso");
-
     }
 
     public int getIdProduto() {
@@ -379,5 +308,4 @@ public class Produtos {
     public void setAro(int aro) {
         this.aro = aro;
     }
-
 }
