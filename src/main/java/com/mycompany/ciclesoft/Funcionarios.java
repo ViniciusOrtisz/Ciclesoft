@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 // Classe : Funcionários
 // Analista Responsável: Erick
-// Desenvolvedor: Nathan
+// Desenvolvedor: Vinicius
 public class Funcionarios {
 
     Random random = new Random();
