@@ -16,67 +16,59 @@ public class Vendas extends Produtos {
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
     
-    public int idVenda;
-    private String dataDaVenda;
-    public int idFuncionario;
-    private int idCliente;
-    private int idProduto;
-    private int quantidade;
-    private double valorUnitario;
-    public double desconto;
-    public double valorTotalVenda;
-    public String formaDePagamento;
+    public int aIdVenda;
+    private String aDataDaVenda;
+    public int aIdFuncionario;
+    private int aIdCliente;
+    private int aIdProduto;
+    private int aQuantidade;
+    private double aValorUnitario;
+    public double aDesconto;
+    public double aValorTotalVenda;
+    public String aFormaDePagamento;
 
     public Vendas(int idProduto, double valorVenda, double valorCusto, String modelo, int qntEstoque, String pneu, String freio, String pedaleira, String banco, String guidao, String quadro, String raio, String marcha, double peso, String cor, int aro, String dataDaVenda, int idCliente, int quantidade, double valorUnitario, double desconto, double valorTotalVenda, int idFuncionario, String formaDePagamento, int idVenda) {
         super(idProduto, valorVenda, valorCusto, modelo, qntEstoque, pneu, freio, pedaleira, banco, guidao, quadro, raio, marcha, peso, cor, aro);
 
-        this.dataDaVenda = dataDaVenda;
-        this.idCliente = idCliente;
-        this.idProduto = idProduto;
-        this.quantidade = quantidade;  
-        this.desconto = desconto;
-        this.valorTotalVenda = valorTotalVenda;
-        this.idFuncionario = idFuncionario;
-        this.formaDePagamento = formaDePagamento;
-        this.idVenda = idVenda;
+        this.aDataDaVenda = aDataDaVenda;
+        this.aIdCliente = aIdCliente;
+        this.aIdProduto = aIdProduto;
+        this.aQuantidade = aQuantidade;  
+        this.aDesconto = aDesconto;
+        this.aValorTotalVenda = aValorTotalVenda;
+        this.aIdFuncionario = aIdFuncionario;
+        this.aFormaDePagamento = aFormaDePagamento;
+        this.aIdVenda = aIdVenda;
     }
 
-    public void CadastrarVenda() {
-
-        System.out.println("INFORME O ID DA VENDA : ");
-        this.idVenda = random.nextInt(1000);
-        System.out.println(idVenda);
-
-        System.out.println("INFORME A DATA DA VENDA : ");
-        this.dataDaVenda = Ler.nextLine();
-
-        System.out.println("INFORME O ID DO FUNCIONARIO RESPONSÁVEL PELA VENDA : ");
-        this.idFuncionario = Ler.nextInt();
-
-        System.out.println("INFORME O ID DO CLIENTE : ");
-        this.idCliente = Ler.nextInt();
-
+    public void CadastrarProdVenda() {
+        
         System.out.println("INFORME O ID DO PRODUTO : ");
-        this.idProduto = Ler.nextInt();
-
+        this.aIdProduto = Ler.nextInt();
         System.out.println("INFORME A QUANTIDADE : ");
-        this.quantidade = Ler.nextInt();
-
+        this.aQuantidade = Ler.nextInt();
         System.out.println("INFORME O VALOR UNITARIO DO PRODUTO : ");
-        this.valorUnitario = Ler.nextDouble();
-
-        System.out.println("INFORME O DESCONTO : ");
-        this.desconto = Ler.nextDouble();
-
-        this.valorTotalVenda = (valorUnitario * quantidade) - desconto;
-        System.out.println("VALOR TOTAL DA VENDA : " + valorTotalVenda);
-
-        System.out.println("INFORME A FORMA DE PAGAMENTO");
-        this.formaDePagamento = Ler.next();
+        this.aValorUnitario = Ler.nextDouble();
     }
-
+    public void CadastrarVenda(){
+        
+        System.out.println("INFORME O ID DA VENDA : ");
+        this.aIdVenda = random.nextInt(1000);
+        System.out.println(aIdVenda);
+        System.out.println("INFORME A DATA DA VENDA : ");
+        this.aDataDaVenda = Ler.nextLine();
+        System.out.println("INFORME O ID DO FUNCIONARIO RESPONSÁVEL PELA VENDA : ");
+        this.aIdFuncionario = Ler.nextInt();
+        System.out.println("INFORME O ID DO CLIENTE : ");
+        this.aIdCliente = Ler.nextInt();
+        System.out.println("INFORME O DESCONTO : ");
+        this.aDesconto = Ler.nextDouble();
+        this.aValorTotalVenda = (aValorUnitario * aQuantidade) - aDesconto;
+        System.out.println("VALOR TOTAL DA VENDA : " + aValorTotalVenda);
+        System.out.println("INFORME A FORMA DE PAGAMENTO");
+        this.aFormaDePagamento = Ler.next();
+    }
     public void AtualizarVenda() {
-
         System.out.println("[1]ID DA VENDA");
         System.out.println("[2]DATA DA VENDA");
         System.out.println("[3]ID FUNCIONARIO");
@@ -91,168 +83,140 @@ public class Vendas extends Produtos {
             System.out.print("Tente novamente escolhendo uma das opcoes acima");
             Ler.next();
         }
-
         int opcao = Ler.nextInt();
         switch (opcao) {
 
             case 1:
                 System.out.println("INFORME O ID DA VENDA : ");
-                this.idVenda = Ler.nextInt();
+                this.aIdVenda = Ler.nextInt();
                 break;
             case 2:
                 System.out.println("INFORME A DATA DE VENDA : ");
-                this.dataDaVenda = Ler.nextLine();
+                this.aDataDaVenda = Ler.nextLine();
                 break;
             case 3:
                 System.out.println("INFORME O ID DO FUNCIONARIO : ");
-                this.idFuncionario = Ler.nextInt();
+                this.aIdFuncionario = Ler.nextInt();
                 break;
             case 4:
                 System.out.println("INFORME O ID DO CLIENTE : ");
-                this.idCliente = Ler.nextInt();
+                this.aIdCliente = Ler.nextInt();
                 break;
             case 5:
                 System.out.println("INFORME O ID DO PRODUTO : ");
-                this.idProduto = Ler.nextInt();
+                this.aIdProduto = Ler.nextInt();
                 break;
             case 6:
                 System.out.println("INFORME A QUANTIDADE : ");
-                this.quantidade = Ler.nextInt();
+                this.aQuantidade = Ler.nextInt();
                 break;
             case 7:
                 System.out.println("INFORME O VALOR UNITARIO : ");
-                this.valorUnitario = Ler.nextDouble();
+                this.aValorUnitario = Ler.nextDouble();
                 break;
             case 8:
                 System.out.println("INFORME O DESCONTO APLICADO : ");
-                this.desconto = Ler.nextDouble();
+                this.aDesconto = Ler.nextDouble();
                 break;
             case 9:
                 System.out.println("INFORME O VALOR TOTAL : ");
-                this.valorTotalVenda = Ler.nextDouble();
+                this.aValorTotalVenda = Ler.nextDouble();
                 break;
             case 10:
                 System.out.println("iNFORME A FORMA DE PAGAMENTO : ");
-                this.formaDePagamento = Ler.next();
+                this.aFormaDePagamento = Ler.next();
                 break;
             case 0:
 
                 break;
-
         }
-
     }
     public void VerAVenda() {
-    System.out.println("===========+VENDA" + idVenda +  " +===========");
-        
-        System.out.println("Id da venda: " + idVenda );
-        System.out.println("Data da Venda realizada: " + dataDaVenda);
-        System.out.println("Funcionário que realizou: " + idFuncionario);
-        System.out.println("Comprador (Cliente): " + idCliente);
-        System.out.println("Código Produto: " + idProduto);
-        System.out.println("Quantidade?: " + quantidade);
-        System.out.println("Valor Unitário: " + valorUnitario);
-        System.out.println("Desconto Aplicado: " + desconto);
-        System.out.println("Valor Total da Venda: " + valorTotalVenda);
-        System.out.println("Forma de Pagamento: " + formaDePagamento);
-    }
+    System.out.println("===========+VENDA" + aIdVenda +  " +===========");
     
-
+        System.out.println("Id da venda: " + aIdVenda );
+        System.out.println("Data da Venda realizada: " + aDataDaVenda);
+        System.out.println("Funcionário que realizou: " + aIdFuncionario);
+        System.out.println("Comprador (Cliente): " + aIdCliente);
+        System.out.println("Código Produto: " + aIdProduto);
+        System.out.println("Quantidade?: " + aQuantidade);
+        System.out.println("Valor Unitário: " + aValorUnitario);
+        System.out.println("Desconto Aplicado: " + aDesconto);
+        System.out.println("Valor Total da Venda: " + aValorTotalVenda);
+        System.out.println("Forma de Pagamento: " + aFormaDePagamento);
+    }
     public void ExcluirVenda() {
-
-        this.idVenda = 0;
-        this.dataDaVenda = "";
-        this.idFuncionario = 0;
-        this.idCliente = 0;
-        this.idProduto = 0;
-        this.quantidade = 0;
-        this.valorUnitario = 0;
-        this.desconto = 0;
-        this.valorTotalVenda = 0;
-        this.formaDePagamento = "";
+        this.aIdVenda = 0;
+        this.aDataDaVenda = "";
+        this.aIdFuncionario = 0;
+        this.aIdCliente = 0;
+        this.aIdProduto = 0;
+        this.aQuantidade = 0;
+        this.aValorUnitario = 0;
+        this.aDesconto = 0;
+        this.aValorTotalVenda = 0;
+        this.aFormaDePagamento = "";
         
         System.out.println("VENDA DELETADA");
-        
     }
-    
-    
-    
-
-    
     public int getIdVenda() {
-        return this.idVenda;
+        return this.aIdVenda;
     }
-    public void setIdVenda(int idVenda) {
-        this.idVenda = idVenda;
+    public void setIdVenda(int aIdVenda) {
+        this.aIdVenda = aIdVenda;
     }
     public String getDataVenda() {
-        return this.dataDaVenda;
+        return this.aDataDaVenda;
     }
-    public void setDataVenda(String dataVenda) {
-        this.dataDaVenda = dataVenda;
+    public void setDataVenda(String aDataVenda) {
+        this.aDataDaVenda = aDataVenda;
     }
     public int getIdFuncionario() {
-        return idFuncionario;
+        return aIdFuncionario;
     }
-
-    public void setIdFuncionario(int idFuncionario) {
-        this.idFuncionario = idFuncionario;
+    public void setIdFuncionario(int aIdFuncionario) {
+        this.aIdFuncionario = aIdFuncionario;
     }
     public int getIdCliente() {
-        return idCliente;
+        return aIdCliente;
     }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setIdCliente(int aIdCliente) {
+        this.aIdCliente = aIdCliente;
     }
     public int getIdProduto() {
-        return idProduto;
+        return aIdProduto;
     }
-    public void setIdProduto (int idProduto){
-        this.idProduto = idProduto;
+    public void setIdProduto (int aIdProduto){
+        this.aIdProduto = aIdProduto;
     }
-
     public int getQuantidade() {
-        return quantidade;
+        return aQuantidade;
     }
-
-    public void setQuantidade(int quantidade) {
-
-        this.quantidade = quantidade;
+    public void setQuantidade(int aQuantidade) {
+        this.aQuantidade = aQuantidade;
     }
-
     public double getValorUnitario() {
-        return valorUnitario;
+        return aValorUnitario;
     }
-
-    public void setValorUnitario(double valorUnitario) {
-        this.valorUnitario = valorUnitario;
+    public void setValorUnitario(double aValorUnitario) {
+        this.aValorUnitario = aValorUnitario;
     }
-
     public double getDesconto() {
-        return desconto;
+        return aDesconto;
     }
-
-    public void setDesconto(double desconto) {
-        this.desconto = desconto;
+    public void setDesconto(double aDesconto) {
+        this.aDesconto = aDesconto;
     }
-
     public double getValorTotalVenda() {
-        return valorTotalVenda;
+        return aValorTotalVenda;
     }
-    public void setValorTotalVenda(double valorTotalVenda ) {
-        this.valorTotalVenda = valorTotalVenda;
+    public void setValorTotalVenda(double aValorTotalVenda ) {
+        this.aValorTotalVenda = aValorTotalVenda;
     }
-
     public String getFormaDePagamento() {
-        return formaDePagamento;
+        return aFormaDePagamento;
     }
-
-    public void setFormaPagamento(String formaPagamento) {
-        this.formaDePagamento = formaPagamento;
+    public void setFormaPagamento(String aFormaDePagamento) {
+        this.aFormaDePagamento = aFormaDePagamento;
     }
-
-
-    
-
 }

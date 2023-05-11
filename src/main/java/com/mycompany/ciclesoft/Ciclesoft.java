@@ -140,6 +140,7 @@ public class Ciclesoft {
                     System.out.println("xxxxxxxx MENU VENDA xxxxxxxx");
 
                     System.out.println("[1]CADASTRAR NOVA VENDA");
+                    System.out.println("[11]INFORMAR PRODUTO NA VENDA");
                     System.out.println("[2]EDITAR VENDA");
                     System.out.println("[3]EXCLUIR VENDA");
                     System.out.println("[4]RELATORIO DE VENDAS");
@@ -160,9 +161,18 @@ public class Ciclesoft {
                                     System.out.println("Vetor disponivel > " + i);
                                     venda[i].CadastrarVenda();
                                     i = tamanhoDoVetor;
+                                }
+                            }
+                            break;
+                            
+                            case 11:
+                            System.out.println("====CADASTRAR PRODUTO NA VENDA ====");
+                            for (int i = 0; i < tamanhoDoVetor; i++) {
 
-                                    break;
-
+                                if (venda[i].getIdVenda() == 0) {
+                                    System.out.println("Vetor disponivel > " + i);
+                                    venda[i].CadastrarProdVenda();
+                                    i = tamanhoDoVetor;
                                 }
                             }
                             break;
