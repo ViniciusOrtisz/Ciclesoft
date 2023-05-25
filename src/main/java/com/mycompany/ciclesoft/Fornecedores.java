@@ -13,7 +13,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Fornecedores {
-
+        
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
 
@@ -27,6 +27,10 @@ public class Fornecedores {
     public String enderecoFornecedor;
     public String telefoneFornecedor;
     public String origemProduto;
+    
+    
+    public Fornecedores(){
+    }
 
     public Fornecedores(int aidFornecedor, String anomeFornecedor, int aidProduto, String anomeProduto, String acnpjFornecedor, String anotaFiscal, String aemailFornecedor, String aenderecoFornecedor, String atelefoneFornecedor, String aorigemProduto) {
         this.idFornecedor = aidFornecedor;

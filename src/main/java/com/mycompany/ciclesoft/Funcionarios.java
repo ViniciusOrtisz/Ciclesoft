@@ -41,45 +41,7 @@ public class Funcionarios extends Pessoa {
     public Funcionarios() {
     }
 
-    public void menuFuncionario() {
-        opcaoWhile = -1;
-        while (opcaoWhile != 0) {
-            System.out.println("xxxxxxxx MENU FUNCIONARIO xxxxxxxx");
 
-            System.out.println("[1]CADASTRAR NOVO FUNCIONARIO");
-            System.out.println("[2]EDITAR FUNCIONARIO");
-            System.out.println("[3]EXCLUIR FUNCIONARIO");
-            System.out.println("[4]CONSULTAR TODOS");
-            System.out.println("[0]SAIR");
-
-            while (!Ler.hasNextInt()) {
-                System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                Ler.next();
-
-            }
-
-            int opcaoSwitch = Ler.nextInt();
-            switch (opcaoSwitch) {
-
-                case 1 ->
-                    CadastrarFuncionario();
-
-                case 2 ->
-                    AtualizarFuncionario();
-
-                case 3 ->
-                    ExcluirFuncionario();
-
-                case 4 ->
-                    consultarTodos();
-
-                case 0 ->
-                    opcaoWhile = 0;
-
-            }
-
-        }
-    }
 
     public void consultarTodos() {
 
@@ -381,12 +343,12 @@ public class Funcionarios extends Pessoa {
         this.idFuncionario = idFuncionario;
     }
 
-    public String getNome() {
-        return nome;
+    public double getSalario() {
+        return salario;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 
     public String getCargo() {
@@ -405,14 +367,6 @@ public class Funcionarios extends Pessoa {
         this.dataAdmissao = dataAdmissao;
     }
 
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
     public double getComissao() {
         return comissao;
     }
@@ -427,6 +381,30 @@ public class Funcionarios extends Pessoa {
 
     public void setnCarteiraTrabalho(String nCarteiraTrabalho) {
         this.nCarteiraTrabalho = nCarteiraTrabalho;
+    }
+
+    public List<Funcionarios> getListaFuncionario() {
+        return listaFuncionario;
+    }
+
+    public void setListaFuncionario(List<Funcionarios> listaFuncionario) {
+        this.listaFuncionario = listaFuncionario;
+    }
+
+    public int getOpcaoWhile() {
+        return opcaoWhile;
+    }
+
+    public void setOpcaoWhile(int opcaoWhile) {
+        this.opcaoWhile = opcaoWhile;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getDataNascimento() {
@@ -445,12 +423,20 @@ public class Funcionarios extends Pessoa {
         this.cpf = cpf;
     }
 
-    public String getRg() {
-        return rg;
+    public String getCpfParaFormatar() {
+        return cpfParaFormatar;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
+    public void setCpfParaFormatar(String cpfParaFormatar) {
+        this.cpfParaFormatar = cpfParaFormatar;
+    }
+
+    public String getRgParaFormatar() {
+        return rgParaFormatar;
+    }
+
+    public void setRgParaFormatar(String rgParaFormatar) {
+        this.rgParaFormatar = rgParaFormatar;
     }
 
     public String getTelefone() {
@@ -501,6 +487,14 @@ public class Funcionarios extends Pessoa {
         this.cep = cep;
     }
 
+    public String getCepParaFormatar() {
+        return cepParaFormatar;
+    }
+
+    public void setCepParaFormatar(String cepParaFormatar) {
+        this.cepParaFormatar = cepParaFormatar;
+    }
+
     public String getCidade() {
         return cidade;
     }
@@ -517,6 +511,8 @@ public class Funcionarios extends Pessoa {
         this.estado = estado;
     }
 
+    
+
     public String cpf_formatador(String cpf) {
         cpf = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9, 11);
 
@@ -530,7 +526,7 @@ public class Funcionarios extends Pessoa {
     }
 
     public String cep_formatador(String cep) {
-        cep = cep.substring(0, 5) + "-" + cep.substring(5, 8);
+        cep = cep.substring(0, 5) + "-" + cep.substring(5, 7);
         return cep;
     }
 }
