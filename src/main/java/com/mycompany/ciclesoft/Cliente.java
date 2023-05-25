@@ -10,33 +10,21 @@ import java.util.Random;
 //Analista: Maria
 //Desenvolvedor: Willyan
 
-public class Cliente {
+public class Cliente extends Pessoa{
 
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
     public Cliente cliente[];
-
     private int idCliente;
-    private String nome;
-    private String cpf;
-    private String rg;
-    public String endereco;
-    public String bairro;
-    public String estado;
-    public String cep;
-    public String telefone;
 
-    public Cliente(int idCliente, String nome, String cpf, String rg, String endereco, String bairro, String estado, String cep, String telefone) {
+    public Cliente(Cliente[] cliente, int idCliente, int idPessoa, String nome, String dataNascimento, String cpf, String cpfParaFormatar, String rgParaFormatar, String telefone, String email, String endereco, String bairro, String referencia, String cep, String cepParaFormatar, String cidade, String rg, String estado) {
+        super(idPessoa, nome, dataNascimento, cpf, cpfParaFormatar, rgParaFormatar, telefone, email, endereco, bairro, referencia, cep, cepParaFormatar, cidade, rg, estado);
+        this.cliente = cliente;
         this.idCliente = idCliente;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.rg = rg;
-        this.endereco = endereco;
-        this.bairro = bairro;
-        this.estado = estado;
-        this.cep = cep;
-        this.telefone = telefone;
+    }
+    
 
+    public Cliente(){
     }
 
     public Cliente[] getCliente() {
@@ -80,7 +68,8 @@ public class Cliente {
                 break;
             case 4:
                 System.out.println("INFORME O RG :");
-                this.rg = Ler.next();
+                 String rg = Ler.next();
+                 setRg(rg);
                 break;
             case 5:
                 System.out.println("INFORME O ENDEREÇO :");
@@ -114,8 +103,9 @@ public class Cliente {
         this.idCliente = 0;
         this.nome = "";
         this.cpf = "";
-        this.rg = "";
+        setRg("");
         this.endereco = "";
+                
         this.bairro = "";
         this.estado = "";
         this.cep = "";

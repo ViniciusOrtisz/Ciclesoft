@@ -26,6 +26,10 @@ public class Vendas extends Produtos {
     public double aDesconto;
     public double aValorTotalVenda;
     public String aFormaDePagamento;
+    
+    public Vendas(){
+    
+    }
 
     public Vendas(int idProduto, double valorVenda, double valorCusto, String modelo, int qntEstoque, String pneu, String freio, String pedaleira, String banco, String guidao, String quadro, String raio, String marcha, double peso, String cor, int aro, String dataDaVenda, int idCliente, int quantidade, double valorUnitario, double desconto, double valorTotalVenda, int idFuncionario, String formaDePagamento, int idVenda) {
         super(idProduto, valorVenda, valorCusto, modelo, qntEstoque, pneu, freio, pedaleira, banco, guidao, quadro, raio, marcha, peso, cor, aro);
@@ -159,6 +163,22 @@ public class Vendas extends Produtos {
         
         System.out.println("VENDA DELETADA");
     }
+
+    @Override
+    public void excluirProduto() {
+        super.excluirProduto(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+    
+    @Override
+    public void atualizacaoProtudo() {
+        super.atualizacaoProtudo(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+    
+    public void atualizacaoProtudo(int i){
+      this.excluirProduto();
+   }
+    
     public int getIdVenda() {
         return this.aIdVenda;
     }

@@ -12,60 +12,30 @@ import java.util.ArrayList;
 // Classe : Funcionários
 // Analista Responsável: Erick
 // Desenvolvedor: Vinicius
-public class Funcionarios {
+public class Funcionarios extends Pessoa {
+
+    private int idFuncionario;
+    private double salario;
+    private String cargo;
+    public String dataAdmissao;
+    public double comissao;
+    public String nCarteiraTrabalho;
 
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
 
     List<Funcionarios> listaFuncionario = new ArrayList<>();
 
-    private int idFuncionario;
-    private double salario;
-    private String cargo;
-    public String nome;
-    public String dataAdmissao;
-    public double comissao;
-    public String nCarteiraTrabalho;
-    public String dataNascimento;
-    public String cpf;
-    public String cpfParaFormatar;
-    public String rg;
-    public String rgParaFormatar;
-    public String telefone;
-    public String email;
-    public String endereco;
-    public String bairro;
-    public String referencia;
-    public String cep;
-    public String cepParaFormatar;
-    public String cidade;
-    public String estado;
-
     public int opcaoWhile = -1;
 
-    public Funcionarios(int idFuncionario, String nome, String cargo, String dataAdmissao, double salario, double comissao, String nCarteiraTrabalho, String dataNascimento, String cpf, String rg, String telefone, String email, String endereco, String bairro, String referencia, String cep, String cidade, String estado) {
+    public Funcionarios(int idFuncionario, double salario, String cargo, String dataAdmissao, double comissao, String nCarteiraTrabalho, int idPessoa, String nome, String dataNascimento, String cpf, String cpfParaFormatar, String rgParaFormatar, String telefone, String email, String endereco, String bairro, String referencia, String cep, String cepParaFormatar, String cidade, String rg, String estado) {
+        super(idPessoa, nome, dataNascimento, cpf, cpfParaFormatar, rgParaFormatar, telefone, email, endereco, bairro, referencia, cep, cepParaFormatar, cidade, rg, estado);
         this.idFuncionario = idFuncionario;
-        this.nome = nome;
+        this.salario = salario;
         this.cargo = cargo;
         this.dataAdmissao = dataAdmissao;
-        this.salario = salario;
         this.comissao = comissao;
         this.nCarteiraTrabalho = nCarteiraTrabalho;
-        this.dataNascimento = dataNascimento;
-        this.cpf = cpf;
-        this.rg = rg;
-        this.telefone = telefone;
-        this.email = email;
-        this.endereco = endereco;
-        this.bairro = bairro;
-        this.referencia = referencia;
-        this.cep = cep;
-        this.cidade = cidade;
-        this.estado = estado;
-    }
-
-    public Funcionarios(int idFuncionario) {
-        this.idFuncionario = idFuncionario;
     }
 
     public Funcionarios() {
@@ -139,7 +109,7 @@ public class Funcionarios {
 
     public void CadastrarFuncionario() {
 
-        listaFuncionario.add(new Funcionarios(0));
+        listaFuncionario.add(new Funcionarios());
         for (Funcionarios funcionarios : listaFuncionario) {
             if (funcionarios.getIdFuncionario() == 0) {
 

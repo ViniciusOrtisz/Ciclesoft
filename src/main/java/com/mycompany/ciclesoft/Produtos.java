@@ -37,7 +37,10 @@ public class Produtos {
     public double peso;
     public String cor;
     public int aro;
-
+    
+    public Produtos(){
+    
+    }
     public Produtos(int idProduto, double valorVenda, double valorCusto, String modelo, int quantidadeEstoque, String pneu, String freio, String pedaleira, String banco, String guidao, String quadro, String raio, String marcha, double peso, String cor, int aro) {
         this.idProduto = idProduto;
         this.valorVenda = valorVenda;
