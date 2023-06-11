@@ -14,9 +14,10 @@ public class VendasMenu extends Vendas {
     private int opcaoClasses;
     private int informarID;
     private int numVenda = 0;
+    
     @Override
     public void CadastrarVenda() {
-        super.CadastrarVenda(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        super.CadastrarVenda();
     }
     
     public void CadastrarVenda(int index) {

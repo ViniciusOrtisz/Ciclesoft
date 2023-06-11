@@ -7,10 +7,7 @@ package com.mycompany.ciclesoft;
 import java.util.Scanner;
 import java.util.Random;
 
-//Analista: Maria
-//Desenvolvedor: Willyan
-
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa {
 
     Random random = new Random();
     public Scanner Ler = new Scanner(System.in);
@@ -22,9 +19,8 @@ public class Cliente extends Pessoa{
         this.cliente = cliente;
         this.idCliente = idCliente;
     }
-    
 
-    public Cliente(){
+    public Cliente() {
     }
 
     public Cliente[] getCliente() {
@@ -68,8 +64,8 @@ public class Cliente extends Pessoa{
                 break;
             case 4:
                 System.out.println("INFORME O RG :");
-                 String rg = Ler.next();
-                 setRg(rg);
+                String rg = Ler.next();
+                setRg(rg);
                 break;
             case 5:
                 System.out.println("INFORME O ENDEREÇO :");
@@ -105,7 +101,7 @@ public class Cliente extends Pessoa{
         this.cpf = "";
         setRg("");
         this.endereco = "";
-                
+
         this.bairro = "";
         this.estado = "";
         this.cep = "";
@@ -125,7 +121,8 @@ public class Cliente extends Pessoa{
         System.out.println("INFORME O CPF ");
         this.cpf = Ler.next();
         System.out.println("INFORME O RG :");
-        this.rg = Ler.next();
+        String rg = Ler.next();
+        setRg(rg);
         System.out.println("INFORME O ENDEREÇO :");
         this.endereco = Ler.next();
         System.out.println("INFORME O BAIRRO :");
@@ -149,66 +146,82 @@ public class Cliente extends Pessoa{
         this.idCliente = idCliente;
     }
 
+    @Override
     public String getNome() {
         return nome;
     }
 
+    @Override
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    @Override
     public String getCpf() {
         return cpf;
     }
 
+    @Override
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
+    @Override
     public String getRg() {
-        return rg;
+        return getRg();
     }
 
+    @Override
     public void setRg(String rg) {
-        this.rg = rg;
+        setRg(rg);
     }
 
+    @Override
     public String getEndereco() {
         return endereco;
     }
 
+    @Override
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
+    @Override
     public String getBairro() {
         return bairro;
     }
 
+    @Override
     public void setBairro(String bairro) {
         this.bairro = bairro;
     }
 
+    @Override
     public String getEstado() {
         return estado;
     }
 
+    @Override
     public void setEstado(String estado) {
         this.estado = estado;
     }
 
+    @Override
     public String getCep() {
         return cep;
     }
 
+    @Override
     public void setCep(String cep) {
         this.cep = cep;
     }
 
+    @Override
     public String getTelefone() {
         return telefone;
     }
 
+    @Override
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
