@@ -67,6 +67,7 @@ public class FornecedoresMenu extends Fornecedores{
                         case 3:
                             System.out.println("====EXCLUIR FORNECEDOR====");
                             
+                            //EDITAR A LISTA DE FORNECEDORES UTILIZANDO o Método @Override toString() 'Que personaliza' o metodo de listar fornecedores
                             System.out.println("LISTA DE FORNECEDORES");
                             for (int j = 0; j < tamanhoDoVetor; j++) {
                                 System.out.println("NOME : " + fornecedor[j].getNomeFornecedor());
