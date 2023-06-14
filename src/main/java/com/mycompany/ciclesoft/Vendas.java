@@ -174,7 +174,7 @@ public class Vendas extends Produtos {
     public void atualizacaoProtudo() {
         super.atualizacaoProtudo(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
-    
+    //OverLoad
     public void atualizacaoProtudo(int i){
       this.excluirProduto();
    }
