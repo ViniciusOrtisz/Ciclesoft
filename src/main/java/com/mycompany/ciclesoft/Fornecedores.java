@@ -117,6 +117,8 @@ public class Fornecedores {
             }
         }
     }
+  
+        
     public void excluirFornecedor() {
         this.idFornecedor = 0;
         this.nomeFornecedor = "";
@@ -129,6 +131,23 @@ public class Fornecedores {
         this.telefoneFornecedor = "";
         System.out.println("Registro de Fornecedor Apagado");
     }
+        
+    @Override
+    public String toString() {
+        return "Fornecedores{" +
+                "idFornecedor=" + idFornecedor +
+                ", nomeFornecedor='" + nomeFornecedor + '\'' +
+                ", idProduto=" + idProduto +
+                ", nomeProduto='" + nomeProduto + '\'' +
+                ", cnpjFornecedor='" + cnpjFornecedor + '\'' +
+                ", notaFiscal='" + notaFiscal + '\'' +
+                ", emailFornecedor='" + emailFornecedor + '\'' +
+                ", enderecoFornecedor='" + enderecoFornecedor + '\'' +
+                ", telefoneFornecedor='" + telefoneFornecedor + '\'' +
+                ", origemProduto='" + origemProduto + '\'' +
+                '}';
+       }
+    }    
 
     public int getIdFornecedor() {
         return idFornecedor;
