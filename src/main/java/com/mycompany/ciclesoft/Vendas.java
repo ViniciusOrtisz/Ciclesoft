@@ -75,16 +75,16 @@ public class Vendas extends Produtos {
     public void AtualizarVenda() {
         System.out.println("[1]ID DA VENDA");
         System.out.println("[2]DATA DA VENDA");
-        System.out.println("[3]ID FUNCIONARIO");
+        System.out.println("[3]ID FUNCIONÁRIO");
         System.out.println("[4]ID CLIENTE");
         System.out.println("[5]ID PRODUTO");
         System.out.println("[6]QUANTIDADE");
-        System.out.println("[7]VALOR UNITARIO");
+        System.out.println("[7]VALOR UNITÁRIO");
         System.out.println("[8]DESCONTO");
         System.out.println("[9]VALOR TOTAL");
         System.out.println("[10]FORMA DE PAGAMENTO");
         while (!Ler.hasNextInt()) {
-            System.out.print("Tente novamente escolhendo uma das opcoes acima");
+            System.out.print("Tente novamente escolhendo uma das opções acima");
             Ler.next();
         }
         int opcao = Ler.nextInt();
@@ -99,7 +99,7 @@ public class Vendas extends Produtos {
                 this.aDataDaVenda = Ler.nextLine();
                 break;
             case 3:
-                System.out.println("INFORME O ID DO FUNCIONARIO : ");
+                System.out.println("INFORME O ID DO FUNCIONÁRIO : ");
                 this.aIdFuncionario = Ler.nextInt();
                 break;
             case 4:
@@ -115,7 +115,7 @@ public class Vendas extends Produtos {
                 this.aQuantidade = Ler.nextInt();
                 break;
             case 7:
-                System.out.println("INFORME O VALOR UNITARIO : ");
+                System.out.println("INFORME O VALOR UNITÁRIO : ");
                 this.aValorUnitario = Ler.nextDouble();
                 break;
             case 8:
@@ -127,7 +127,7 @@ public class Vendas extends Produtos {
                 this.aValorTotalVenda = Ler.nextDouble();
                 break;
             case 10:
-                System.out.println("iNFORME A FORMA DE PAGAMENTO : ");
+                System.out.println("INFORME A FORMA DE PAGAMENTO : ");
                 this.aFormaDePagamento = Ler.next();
                 break;
             case 0:
@@ -143,7 +143,7 @@ public class Vendas extends Produtos {
         System.out.println("Funcionário que realizou: " + aIdFuncionario);
         System.out.println("Comprador (Cliente): " + aIdCliente);
         System.out.println("Código Produto: " + aIdProduto);
-        System.out.println("Quantidade?: " + aQuantidade);
+        System.out.println("Quantidade: " + aQuantidade);
         System.out.println("Valor Unitário: " + aValorUnitario);
         System.out.println("Desconto Aplicado: " + aDesconto);
         System.out.println("Valor Total da Venda: " + aValorTotalVenda);
@@ -166,13 +166,12 @@ public class Vendas extends Produtos {
 
     @Override
     public void excluirProduto() {
-        super.excluirProduto(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
+        super.excluirProduto(); 
 
     
     @Override
     public void atualizacaoProtudo() {
-        super.atualizacaoProtudo(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        super.atualizacaoProtudo(); 
     }
     //OverLoad
     public void atualizacaoProtudo(int i){
