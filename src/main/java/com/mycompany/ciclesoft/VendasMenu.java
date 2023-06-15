@@ -21,22 +21,22 @@ public class VendasMenu extends Vendas {
     }
     
     public void CadastrarVenda(int index) {
-        System.out.println("NOSSO CADASTRO - Num.Venda: " + index);
+        System.out.println("Nosso Cadastro - Número de Venda: " + index);
         super.CadastrarVenda();
     }
-    
-    
-    
-    public void menuVendas(Scanner scanner, Vendas[] venda, int tamanhoDoVetor) {
-        System.out.println("xxxxxxxx MENU VENDA xxxxxxxx");
+ 
+    public void menuVendas(Scanner scanner, Vendas[] venda, int tamanhoDoVetor) { 
+     System.out.println("╔═════════════════════   @Ciclesoft   ══════════════════════╗");
+     System.out.println("╚═════════════════════   Menu Venda   ══════════════════════╝");
+     System.out.println("║                       [1]Cadastrar Nova Venda             ║");      
+     System.out.println("║                       [1.1]Cadastrar Produto na Venda     ║");
+     System.out.println("║                       [2]Editar Venda                     ║"); 
+     System.out.println("║                       [3]Excluir Venda                    ║");
+     System.out.println("║                       [4]Relatórios de Vendas             ║");
+     System.out.println("║                       [5]Ver uma Venda                    ║");
+     System.out.println("║                       [0]Sair                             ║"); 
+     System.out.println("╚═══════════════════════════════════════════════════════════╝");
 
-        System.out.println("[1]CADASTRAR NOVA VENDA");
-        System.out.println("[11]INFORMAR PRODUTO NA VENDA");
-        System.out.println("[2]EDITAR VENDA");
-        System.out.println("[3]EXCLUIR VENDA");
-        System.out.println("[4]RELATORIO DE VENDAS");
-        System.out.println("[4]VER UMA VENDA");
-        System.out.println("[0]SAIR");
 
         while (!scanner.hasNextInt()) {
             System.out.print("Tente novamente escolhendo uma das opcoes acima");
@@ -50,7 +50,7 @@ public class VendasMenu extends Vendas {
                 break;
 
             case 11:
-                System.out.println("====CADASTRAR PRODUTO NA VENDA ====");
+                System.out.println("════ Cadastrar Produto na Venda ════");
                 for (int i = 0; i < tamanhoDoVetor; i++) {
 
                     if (venda[i].getIdVenda() == 0) {
@@ -62,13 +62,13 @@ public class VendasMenu extends Vendas {
                 break;
 
             case 2:
-                System.out.println("====EDITAR VENDA====");
-                System.out.println("LISTA DE VENDAS");
+                System.out.println("════ Editar Venda ════");
+                System.out.println("Lista de vendas");
 
                 for (int j = 0; j < tamanhoDoVetor; j++) {
                     System.out.println("ID Do Produto Vendido: " + venda[j].getIdProduto());
                     System.out.println("ID Da Venda Realizada: " + venda[j].getIdVenda());
-                    System.out.println("==========================");
+                    System.out.println("════════════════════════════");
                 }
                 System.out.println("Informe o Código da Venda:");
                 informarID = scanner.nextInt();
@@ -84,13 +84,13 @@ public class VendasMenu extends Vendas {
                 break;
 
             case 3:
-                System.out.println("==== EXCLUIR VENDA ====");
-                System.out.println("LISTA DE VENDAS");
+                System.out.println("════ Excluir Venda ════");
+                System.out.println("Lista de vendas");
 
                 for (int j = 0; j < tamanhoDoVetor; j++) {
                     System.out.println("ID Do Produto Vendido: " + venda[j].getIdProduto());
                     System.out.println("ID Da Venda Realizada: " + venda[j].getIdVenda());
-                    System.out.println("==========================");
+                    System.out.println("════════════════════════════");
                 }
                 System.out.println("Informe o Código da Venda:");
                 informarID = scanner.nextInt();
@@ -105,26 +105,26 @@ public class VendasMenu extends Vendas {
                 }
                 break;
             case 4:
-                System.out.println("==== RELATORIO DE VENDAS ====");
-                System.out.println("LISTA DE VENDAS");
+                System.out.println("════ Relatório de vendas ════");
+                System.out.println("Lista de vendas");
 
                 for (int j = 0; j < tamanhoDoVetor; j++) {
                     System.out.println("ID Do Produto Vendido: " + venda[j].getIdProduto());
                     System.out.println("ID Da Venda Realizada: " + venda[j].getIdVenda());
                     System.out.println("Quantidade Vendida: " + venda[j].getQuantidade());
                     System.out.println("Desconto aplicado: " + venda[j].getDesconto());
-                    System.out.println("==========================");
+                    System.out.println("════════════════════════════");
                 }
                 break;
 
             case 5:
-                System.out.println("==== VER UMA VENDA ====");
-                System.out.println("LISTA DE VENDAS");
+                System.out.println("════ Ver uma venda ════");
+                System.out.println("Lista de vendas");
 
                 for (int j = 0; j < tamanhoDoVetor; j++) {
                     System.out.println("ID Do Produto Vendido: " + venda[j].getIdProduto());
                     System.out.println("ID Da Venda Realizada: " + venda[j].getIdVenda());
-                    System.out.println("==========================");
+                    System.out.println("════════════════════════════");
                 }
                 System.out.println("Informe o Código da Venda:");
                 informarID = scanner.nextInt();
@@ -139,7 +139,7 @@ public class VendasMenu extends Vendas {
                 }
                 break;
             case 0:
-                System.out.println("====VOLTAR====");
+                System.out.println("════ Sair ════");
                 break;
         }
 
