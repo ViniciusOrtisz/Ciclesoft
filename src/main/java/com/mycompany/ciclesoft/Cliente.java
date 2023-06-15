@@ -31,111 +31,100 @@ public class Cliente extends Pessoa {
         this.cliente = cliente;
     }
 
-    public void AtualizarCliente() {
-
-        System.out.println("[1]ID");
-        System.out.println("[2]NOME");
-        System.out.println("[3]CPF");
-        System.out.println("[4]RG");
-        System.out.println("[5]ENDEREÇO");
-        System.out.println("[6]BAIRRO");
-        System.out.println("[7]ESTADO");
-        System.out.println("[8]CEP");
-        System.out.println("[9]TELEFONE");
-        while (!Ler.hasNextInt()) {
-            System.out.print("Tente novamente escolhendo uma das opcoes acima");
-            Ler.next(); //
-        }
-
-        int opcao = Ler.nextInt();
-        switch (opcao) {
-
-            case 1:
-                System.out.println("INFORME O ID :" + "");
-                this.idCliente = Ler.nextInt();
-                break;
-            case 2:
-                System.out.println("INFORME O NOME : ");
-                this.nome = Ler.next();
-                break;
-            case 3:
-                System.out.println("INFORME O CPF ");
-                this.cpf = Ler.next();
-                break;
-            case 4:
-                System.out.println("INFORME O RG :");
-                String rg = Ler.next();
-                setRg(rg);
-                break;
-            case 5:
-                System.out.println("INFORME O ENDEREÇO :");
-                this.endereco = Ler.next();
-                break;
-            case 6:
-                System.out.println("INFORME O BAIRRO :");
-                this.bairro = Ler.next();
-                break;
-            case 7:
-                System.out.println("INFORME O ESTADO :");
-                this.estado = Ler.next();
-                break;
-            case 8:
-                System.out.println("INFORME O CEP :");
-                this.cep = Ler.next();
-                break;
-            case 9:
-                System.out.println("INFORME O TELEFONE :");
-                this.telefone = Ler.next();
-                break;
-            case 0:
-
-                break;
-
-        }
-
+public void AtualizarCliente() {
+    System.out.println("[1] ID");
+    System.out.println("[2] Nome");
+    System.out.println("[3] CPF");
+    System.out.println("[4] RG");
+    System.out.println("[5] Endereço");
+    System.out.println("[6] Bairro");
+    System.out.println("[7] Estado");
+    System.out.println("[8] CEP");
+    System.out.println("[9] Telefone");
+    while (!Ler.hasNextInt()) {
+        System.out.print("Tente novamente escolhendo uma das opções acima: ");
+        Ler.next(); //
     }
 
-    public void ExcluirCliente() {
-        this.idCliente = 0;
-        this.nome = "";
-        this.cpf = "";
-        setRg("");
-        this.endereco = "";
+           int opcao = Ler.nextInt();
+    switch (opcao) {
+        case 1:
+            System.out.println("Informe o ID:");
+            this.idCliente = Ler.nextInt();
+            break;
+        case 2:
+            System.out.println("Informe o nome:");
+            this.nome = Ler.next();
+            break;
+        case 3:
+            System.out.println("Informe o CPF:");
+            this.cpf = Ler.next();
+            break;
+        case 4:
+            System.out.println("Informe o RG:");
+            String rg = Ler.next();
+            setRg(rg);
+            break;
+        case 5:
+            System.out.println("Informe o endereço:");
+            this.endereco = Ler.next();
+            break;
+        case 6:
+            System.out.println("Informe o bairro:");
+            this.bairro = Ler.next();
+            break;
+        case 7:
+            System.out.println("Informe o estado:");
+            this.estado = Ler.next();
+            break;
+        case 8:
+            System.out.println("Informe o CEP:");
+            this.cep = Ler.next();
+            break;
+        case 9:
+            System.out.println("Informe o telefone:");
+            this.telefone = Ler.next();
+            break;
+        case 0:
+            break;
+        }
+        }
 
-        this.bairro = "";
-        this.estado = "";
-        this.cep = "";
-        this.telefone = "";
-
-        System.out.println("CLIENTE DELETADO");
-
+         public void ExcluirCliente() {
+         this.idCliente = 0;
+         this.nome = "";
+         this.cpf = "";
+         setRg("");
+         this.endereco = "";
+         this.bairro = "";
+         this.estado = "";
+         this.cep = "";
+         this.telefone = "";
+         System.out.println("Cliente deletado");
     }
 
-    public void CadastrarCliente() {
-        System.out.println("O ID DO CLIENTE SERÁ:");
+        public void CadastrarCliente() {
+        System.out.println("O ID do cliente será:");
         this.idCliente = random.nextInt(1000);
         System.out.println(idCliente);
-
-        System.out.println("INFORME O NOME DO " + "CLIENTE" + " :");
+        System.out.println("Informe o nome do cliente:");
         this.nome = Ler.next();
-        System.out.println("INFORME O CPF ");
+        System.out.println("Informe o CPF:");
         this.cpf = Ler.next();
-        System.out.println("INFORME O RG :");
+        System.out.println("Informe o RG:");
         String rg = Ler.next();
         setRg(rg);
-        System.out.println("INFORME O ENDEREÇO :");
+        System.out.println("Informe o endereço:");
         this.endereco = Ler.next();
-        System.out.println("INFORME O BAIRRO :");
+        System.out.println("Informe o bairro:");
         this.bairro = Ler.next();
-        System.out.println("INFORME O ESTADO :");
+        System.out.println("Informe o estado:");
         this.estado = Ler.next();
-        System.out.println("INFORME O CEP :");
+        System.out.println("Informe o CEP:");
         this.cep = Ler.next();
-        System.out.println("INFORME O TELEFONE :");
+        System.out.println("Informe o telefone:");
         this.telefone = Ler.next();
-
-        System.out.println("CADASTRO REALIZADO COM SUCESSO");
-
+        System.out.println("Cadastro realizado com sucesso");
     }
 
     public int getIdCliente() {
