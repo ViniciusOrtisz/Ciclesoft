@@ -16,12 +16,13 @@ public class ClienteMenu {
     private int informarID;
 
     public void menuCliente(Scanner scanner, Cliente[] cliente, int tamanhoDoVetor) {
-        System.out.println("xxxxxxxx MENU CLIENTE xxxxxxxx");
-
-        System.out.println("[1]CADASTRAR CLIENTE");
-        System.out.println("[2]EDITAR CLIENTE");
-        System.out.println("[3]EXCLUIR CLIENTE");
-        System.out.println("[0]VOLTAR");
+            System.out.println("╔═════════════════════   @Ciclesoft   ══════════════════════╗");
+            System.out.println("╚═════════════════════  Menu Cliente  ══════════════════════╝");
+            System.out.println("║                       [1]Cadastrar Cliente                ║");                         
+            System.out.println("║                       [2]Editar Cliente                   ║"); 
+            System.out.println("║                       [3]Excluir Cliente                  ║"); 
+            System.out.println("║                       [0]Voltar                           ║"); 
+            System.out.println("╚═══════════════════════════════════════════════════════════╝");
         while (!scanner.hasNextInt()) {
             System.out.print("Tente novamente escolhendo uma das opcoes acima");
             scanner.next(); //
@@ -29,7 +30,7 @@ public class ClienteMenu {
         opcaoClasses = scanner.nextInt();
         switch (opcaoClasses) {
             case 1:
-                System.out.println("====CADASTRAR CLIENTE ====");
+                System.out.println("═══ Cadastar Cliente ═══");
                 for (int i = 0; i < tamanhoDoVetor; i++) {
 
                     if (cliente[i].getIdCliente() == 0) {
@@ -43,12 +44,12 @@ public class ClienteMenu {
                 }
                 break;
             case 2:
-                System.out.println("====EDITAR CLIENTE====");
-                System.out.println("LISTA DE CLIENTES");
+                System.out.println("═══ Editar Cliente ═══");
+                System.out.println("   Lista de clientes   ");
                 for (int j = 0; j < tamanhoDoVetor; j++) {
-                    System.out.println("NOME : " + cliente[j].getNome());
-                    System.out.println("ID : " + cliente[j].getIdCliente());
-                    System.out.println("==========================");
+                    System.out.println("Nome : " + cliente[j].getNome());
+                    System.out.println("ID: " + cliente[j].getIdCliente());
+                    System.out.println("══════════════════════════");
                 }
                 System.out.println("Informe o Código do Cliente:");
                 informarID = scanner.nextInt();
@@ -64,12 +65,12 @@ public class ClienteMenu {
                 }
                 break;
             case 3:
-                System.out.println("====EXCLUIR CLIENTE====");
-                System.out.println("LISTA DE CLIENTES");
+                System.out.println("═══ Excluir Cliente ═══");
+                System.out.println("   Lista de clientes   ");
                 for (int j = 0; j < tamanhoDoVetor; j++) {
-                    System.out.println("NOME : " + cliente[j].getNome());
+                    System.out.println("Nome : " + cliente[j].getNome());
                     System.out.println("ID : " + cliente[j].getIdCliente());
-                    System.out.println("==========================");
+                    System.out.println("══════════════════════════");
                 }
                 System.out.println("Informe o Código do Cliente:");
                 informarID = scanner.nextInt();
