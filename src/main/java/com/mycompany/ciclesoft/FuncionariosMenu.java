@@ -16,14 +16,15 @@ public class FuncionariosMenu extends Funcionarios{
       
         public void menuFuncionarios() {
         opcaoWhile = -1;
-        while (opcaoWhile != 0) {
-            System.out.println("xxxxxxxx MENU FUNCIONARIO xxxxxxxx");
-
-            System.out.println("[1]CADASTRAR NOVO FUNCIONARIO");
-            System.out.println("[2]EDITAR FUNCIONARIO");
-            System.out.println("[3]EXCLUIR FUNCIONARIO");
-            System.out.println("[4]CONSULTAR TODOS");
-            System.out.println("[0]SAIR");
+        while (opcaoWhile != 0) {      
+            System.out.println("╔═════════════════════    @Ciclesoft    ════════════════════╗");
+            System.out.println("╚═════════════════════ Menu Funcionário ════════════════════╝");
+            System.out.println("║                      [1]Cadastrar Novo Funcionário        ║");                         
+            System.out.println("║                      [2]Editar Funcionário                ║"); 
+            System.out.println("║                      [3]Excluir Funcionário               ║"); 
+            System.out.println("║                      [4]Consultar Todos                   ║");
+            System.out.println("║                      [0]Sair                              ║"); 
+            System.out.println("╚═══════════════════════════════════════════════════════════╝");
 
             while (!Ler.hasNextInt()) {
                 System.out.print("Tente novamente escolhendo uma das opcoes acima");
