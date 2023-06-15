@@ -16,11 +16,13 @@ public class ProdutosMenu extends Produtos {
     private int informarID;
 
     public void menuProdutos(Scanner scanner, Produtos produto[], int tamanhoDoVetor) {
-        System.out.println("xxxxxxxx PRODUTOS xxxxxxxx");
-        System.out.println("[1]CADASTRAR PRODUTO");
-        System.out.println("[2]EDITAR PRODUTO");
-        System.out.println("[3]EXCLUIR PRODUTO");
-        System.out.println("[0]SAIR");
+     System.out.println("╔═════════════════════   @Ciclesoft   ══════════════════════╗");
+     System.out.println("╚═════════════════════ Menu Produtos  ══════════════════════╝");
+     System.out.println("║                       [1]Cadastrar Produto                ║");                         
+     System.out.println("║                       [2]Editar Produto                   ║"); 
+     System.out.println("║                       [3]Excluir Produto                  ║");
+     System.out.println("║                       [0]Sair                             ║"); 
+     System.out.println("╚═══════════════════════════════════════════════════════════╝");
 
         while (!scanner.hasNextInt()) {
             System.out.print("Tente novamente escolhendo uma das opcoes acima");
@@ -29,7 +31,7 @@ public class ProdutosMenu extends Produtos {
         opcaoClasses = scanner.nextInt();
         switch (opcaoClasses) {
             case 1:
-                System.out.println("====CADASTRAR PRODUTO====");
+                System.out.println("═══ Cadastrar Produto ═══");
                 for (int i = 0; i < tamanhoDoVetor; i++) {
 
                     if (produto[i].getIdProduto() == 0) {
@@ -43,12 +45,12 @@ public class ProdutosMenu extends Produtos {
                 }
                 break;
             case 2:
-                System.out.println("====EDITAR PRODUTO====");
-                System.out.println("LISTA DE PRODUTOS");
+                System.out.println("═══ Editar Produto ═══");
+                System.out.println("Lista de Produtos");
 
                 for (int j = 0; j < tamanhoDoVetor; j++) {
                     System.out.println("ID : " + produto[j].getIdProduto());
-                    System.out.println("==========================");
+                    System.out.println("═══════════════════════════");
                 }
                 System.out.println("Informe o Código do Produto:");
                 informarID = scanner.nextInt();
@@ -63,11 +65,11 @@ public class ProdutosMenu extends Produtos {
                 }
                 break;
             case 3:
-                System.out.println("====EXCLUIR PRODUTO====");
-                System.out.println("LISTA DE PRODUTOS");
+                System.out.println("═══ Excluir Produto ═══");
+                System.out.println("Lista de Produtos");
                 for (int j = 0; j < tamanhoDoVetor; j++) {
                     System.out.println("ID : " + produto[j].getIdProduto());
-                    System.out.println("==========================");
+                    System.out.println("═══════════════════════════");
                 }
                 System.out.println("Informe o Código do Produto:");
                 informarID = scanner.nextInt();
