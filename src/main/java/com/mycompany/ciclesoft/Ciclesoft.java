@@ -9,7 +9,6 @@ public class Ciclesoft {
         int opcaoClasses;
         int tamanhoDoVetor = 5;
         Scanner scanner = new Scanner(System.in);
-        int informarID;
         VendasMenu menu = new VendasMenu();
         ClienteMenu cliMenu = new ClienteMenu();
         FornecedoresMenu forneMenu = new FornecedoresMenu();
@@ -47,17 +46,18 @@ public class Ciclesoft {
         System.out.println("|Ciclesoft|-|Seja Bem-Vindo| - Através do Menu Escolha um módulo");
 
         do {
-            System.out.println("xxxxxxxx MENU PRINCIPAL xxxxxxxx");
-            System.out.println("[1]CLIENTE");
-            System.out.println("[2]VENDAS");
-            System.out.println("[3]PRODUTOS");
-            System.out.println("[4]FORNECEDORES");
-            System.out.println("[5]FUNCIONARIOS");
-            System.out.println("[0]SAIR");
-            System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            System.out.println("╔═════════════════════   @Ciclesoft   ══════════════════════╗");
+            System.out.println("╚═════════════════════ Menu Principal ══════════════════════╝");
+            System.out.println("║                       [1]Cliente                          ");                         
+            System.out.println("║                       [2]Vendas                           ║"); 
+            System.out.println("║                       [3]Produtos                         ║"); 
+            System.out.println("║                       [4]Fornecedores                     ║"); 
+            System.out.println("║                       [5]Funcionários                     ║");
+            System.out.println("║                       [0]Sair                             ║"); 
+            System.out.println("╚═══════════════════════════════════════════════════════════╝");
 
             while (!scanner.hasNextInt()) {
-                System.out.print("Tente novamente escolhendo uma das opcoes acima");
+                System.out.print("Tente novamente escolhendo uma das opções acima");
                 scanner.next();
             }
             opcao = scanner.nextInt();
