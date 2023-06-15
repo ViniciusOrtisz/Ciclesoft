@@ -48,7 +48,7 @@ public class Ciclesoft {
         do {
             System.out.println("╔═════════════════════   @Ciclesoft   ══════════════════════╗");
             System.out.println("╚═════════════════════ Menu Principal ══════════════════════╝");
-            System.out.println("║                       [1]Cliente                          ");                         
+            System.out.println("║                       [1]Cliente                          ║");                         
             System.out.println("║                       [2]Vendas                           ║"); 
             System.out.println("║                       [3]Produtos                         ║"); 
             System.out.println("║                       [4]Fornecedores                     ║"); 
