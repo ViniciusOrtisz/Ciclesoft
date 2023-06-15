@@ -45,103 +45,101 @@ public class Vendas extends Produtos {
         this.aIdVenda = aIdVenda;
     }
 
-    public void CadastrarProdVenda() {
-        
-        System.out.println("INFORME O ID DO PRODUTO : ");
-        this.aIdProduto = Ler.nextInt();
-        System.out.println("INFORME A QUANTIDADE : ");
-        this.aQuantidade = Ler.nextInt();
-        System.out.println("INFORME O VALOR UNITARIO DO PRODUTO : ");
-        this.aValorUnitario = Ler.nextDouble();
-    }
-    public void CadastrarVenda(){
-        
-        System.out.println("INFORME O ID DA VENDA : ");
-        this.aIdVenda = random.nextInt(1000);
-        System.out.println(aIdVenda);
-        System.out.println("INFORME A DATA DA VENDA : ");
-        this.aDataDaVenda = Ler.nextLine();
-        System.out.println("INFORME O ID DO FUNCIONARIO RESPONSÁVEL PELA VENDA : ");
-        this.aIdFuncionario = Ler.nextInt();
-        System.out.println("INFORME O ID DO CLIENTE : ");
-        this.aIdCliente = Ler.nextInt();
-        System.out.println("INFORME O DESCONTO : ");
-        this.aDesconto = Ler.nextDouble();
-        this.aValorTotalVenda = (aValorUnitario * aQuantidade) - aDesconto;
-        System.out.println("VALOR TOTAL DA VENDA : " + aValorTotalVenda);
-        System.out.println("INFORME A FORMA DE PAGAMENTO");
-        this.aFormaDePagamento = Ler.next();
-    }
-    public void AtualizarVenda() {
-        System.out.println("[1]ID DA VENDA");
-        System.out.println("[2]DATA DA VENDA");
-        System.out.println("[3]ID FUNCIONÁRIO");
-        System.out.println("[4]ID CLIENTE");
-        System.out.println("[5]ID PRODUTO");
-        System.out.println("[6]QUANTIDADE");
-        System.out.println("[7]VALOR UNITÁRIO");
-        System.out.println("[8]DESCONTO");
-        System.out.println("[9]VALOR TOTAL");
-        System.out.println("[10]FORMA DE PAGAMENTO");
-        while (!Ler.hasNextInt()) {
-            System.out.print("Tente novamente escolhendo uma das opções acima");
-            Ler.next();
+          public void CadastrarProdVenda() {
+            System.out.println("Informe o ID do produto: ");
+            this.aIdProduto = Ler.nextInt();
+            System.out.println("Informe a quantidade: ");
+            this.aQuantidade = Ler.nextInt();
+            System.out.println("Informe o valor unitário do produto: ");
+            this.aValorUnitario = Ler.nextDouble();
         }
-        int opcao = Ler.nextInt();
-        switch (opcao) {
 
-            case 1:
-                System.out.println("INFORME O ID DA VENDA : ");
-                this.aIdVenda = Ler.nextInt();
-                break;
-            case 2:
-                System.out.println("INFORME A DATA DE VENDA : ");
-                this.aDataDaVenda = Ler.nextLine();
-                break;
-            case 3:
-                System.out.println("INFORME O ID DO FUNCIONÁRIO : ");
-                this.aIdFuncionario = Ler.nextInt();
-                break;
-            case 4:
-                System.out.println("INFORME O ID DO CLIENTE : ");
-                this.aIdCliente = Ler.nextInt();
-                break;
-            case 5:
-                System.out.println("INFORME O ID DO PRODUTO : ");
-                this.aIdProduto = Ler.nextInt();
-                break;
-            case 6:
-                System.out.println("INFORME A QUANTIDADE : ");
-                this.aQuantidade = Ler.nextInt();
-                break;
-            case 7:
-                System.out.println("INFORME O VALOR UNITÁRIO : ");
-                this.aValorUnitario = Ler.nextDouble();
-                break;
-            case 8:
-                System.out.println("INFORME O DESCONTO APLICADO : ");
-                this.aDesconto = Ler.nextDouble();
-                break;
-            case 9:
-                System.out.println("INFORME O VALOR TOTAL : ");
-                this.aValorTotalVenda = Ler.nextDouble();
-                break;
-            case 10:
-                System.out.println("INFORME A FORMA DE PAGAMENTO : ");
-                this.aFormaDePagamento = Ler.next();
-                break;
-            case 0:
-
-                break;
+        public void CadastrarVenda() {
+            System.out.println("Informe o ID da venda: ");
+            this.aIdVenda = random.nextInt(1000);
+            System.out.println(aIdVenda);
+            System.out.println("Informe a data da venda: ");
+            this.aDataDaVenda = Ler.nextLine();
+            System.out.println("Informe o ID do funcionário responsável pela venda: ");
+            this.aIdFuncionario = Ler.nextInt();
+            System.out.println("Informe o ID do cliente: ");
+            this.aIdCliente = Ler.nextInt();
+            System.out.println("Informe o desconto: ");
+            this.aDesconto = Ler.nextDouble();
+            this.aValorTotalVenda = (aValorUnitario * aQuantidade) - aDesconto;
+            System.out.println("Valor total da venda: " + aValorTotalVenda);
+            System.out.println("Informe a forma de pagamento");
+            this.aFormaDePagamento = Ler.next();
         }
-    }
+
+        public void AtualizarVenda() {
+            System.out.println("[1] ID da venda");
+            System.out.println("[2] Data da venda");
+            System.out.println("[3] ID funcionário");
+            System.out.println("[4] ID cliente");
+            System.out.println("[5] ID produto");
+            System.out.println("[6] Quantidade");
+            System.out.println("[7] Valor unitário");
+            System.out.println("[8] Desconto");
+            System.out.println("[9] Valor total");
+            System.out.println("[10] Forma de pagamento");
+            while (!Ler.hasNextInt()) {
+                System.out.print("Tente novamente escolhendo uma das opções acima");
+                Ler.next();
+            }
+            int opcao = Ler.nextInt();
+            switch (opcao) {
+                case 1:
+                    System.out.println("Informe o ID da venda: ");
+                    this.aIdVenda = Ler.nextInt();
+                    break;
+                case 2:
+                    System.out.println("Informe a data de venda: ");
+                    this.aDataDaVenda = Ler.nextLine();
+                    break;
+                case 3:
+                    System.out.println("Informe o ID do funcionário: ");
+                    this.aIdFuncionario = Ler.nextInt();
+                    break;
+                case 4:
+                    System.out.println("Informe o ID do cliente: ");
+                    this.aIdCliente = Ler.nextInt();
+                    break;
+                case 5:
+                    System.out.println("Informe o ID do produto: ");
+                    this.aIdProduto = Ler.nextInt();
+                    break;
+                case 6:
+                    System.out.println("Informe a quantidade: ");
+                    this.aQuantidade = Ler.nextInt();
+                    break;
+                case 7:
+                    System.out.println("Informe o valor unitário: ");
+                    this.aValorUnitario = Ler.nextDouble();
+                    break;
+                case 8:
+                    System.out.println("Informe o desconto aplicado: ");
+                    this.aDesconto = Ler.nextDouble();
+                    break;
+                case 9:
+                    System.out.println("Informe o valor total: ");
+                    this.aValorTotalVenda = Ler.nextDouble();
+                    break;
+                case 10:
+                    System.out.println("Informe a forma de pagamento: ");
+                    this.aFormaDePagamento = Ler.next();
+                    break;
+                case 0:
+                    break;
+            }
+        }
     public void VerAVenda() {
-    System.out.println("===========+VENDA" + aIdVenda +  " +===========");
+    System.out.println("═════════ Venda" + aIdVenda +  " ═════════");
     
         System.out.println("Id da venda: " + aIdVenda );
         System.out.println("Data da Venda realizada: " + aDataDaVenda);
         System.out.println("Funcionário que realizou: " + aIdFuncionario);
-        System.out.println("Comprador (Cliente): " + aIdCliente);
+        System.out.println("Cliente: " + aIdCliente);
         System.out.println("Código Produto: " + aIdProduto);
         System.out.println("Quantidade: " + aQuantidade);
         System.out.println("Valor Unitário: " + aValorUnitario);
@@ -161,7 +159,7 @@ public class Vendas extends Produtos {
         this.aValorTotalVenda = 0;
         this.aFormaDePagamento = "";
         
-        System.out.println("VENDA DELETADA");
+        System.out.println("Venda Deletada");
     }
 
     @Override
