@@ -14,14 +14,15 @@ public class FornecedoresMenu extends Fornecedores{
     private int opcaoClasses;
     private int informarID;
     
-    public void menuFornecedores(Scanner scanner, Fornecedores[] fornecedor, int tamanhoDoVetor){
-     System.out.println("xxxxxxxx MENU FORNECEDOR xxxxxxxx");
-                    
-                    System.out.println("[1]CADASTRAR FORNECEDOR");
-                    System.out.println("[2]EDITAR FORNECEDOR");
-                    System.out.println("[3]EXCLUIR FORNECEDOR");
-                    System.out.println("[0]SAIR");
-                    
+    public void menuFornecedores(Scanner scanner, Fornecedores[] fornecedor, int tamanhoDoVetor){   
+            System.out.println("╔═════════════════════    @Ciclesoft   ═════════════════════╗");
+            System.out.println("╚═════════════════════ Menu Fornecedor ═════════════════════╝");
+            System.out.println("║                       [1]Cadastrar Fornecedor             ║");                         
+            System.out.println("║                       [2]Editar Fornecedor                ║"); 
+            System.out.println("║                       [3]Excluir Fornecedor               ║"); 
+            System.out.println("║                       [0]Sair                             ║"); 
+            System.out.println("╚═══════════════════════════════════════════════════════════╝");
+        
                     while (!scanner.hasNextInt()) {
                         System.out.print("Tente novamente escolhendo uma das opcoes acima");
                         scanner.next();
@@ -29,7 +30,7 @@ public class FornecedoresMenu extends Fornecedores{
                     opcaoClasses = scanner.nextInt();
                     switch (opcaoClasses) {
                         case 1:
-                            System.out.println("====CADASTRAR FORNECEDOR ====");
+                            System.out.println("═══ Cadastrar Fornecedor ═══");
                             for (int i = 0; i < tamanhoDoVetor; i++) {
                                 
                                 if (fornecedor[i].getIdFornecedor() == 0) {
@@ -43,13 +44,13 @@ public class FornecedoresMenu extends Fornecedores{
                             }
                             break;
                         case 2:
-                            System.out.println("====EDITAR FORNECEDOR====");
+                            System.out.println("═══ Editar Fornecedor ═══");
                             
-                            System.out.println("LISTA DE FORNECEDORES");
+                            System.out.println("Lista de fornecedores");
                             for (int j = 0; j < tamanhoDoVetor; j++) {
-                                System.out.println("NOME : " + fornecedor[j].getNomeFornecedor());
+                                System.out.println("Nome : " + fornecedor[j].getNomeFornecedor());
                                 System.out.println("ID : " + fornecedor[j].getIdFornecedor());
-                                System.out.println("==========================");
+                                System.out.println("══════════════════════════════");
                             }
                             System.out.println("Informe o Código do Fornecedor:");
                             informarID = scanner.nextInt();
@@ -65,14 +66,14 @@ public class FornecedoresMenu extends Fornecedores{
                             }
                             break;
                         case 3:
-                            System.out.println("====EXCLUIR FORNECEDOR====");
+                            System.out.println("═══ Excluir Fornecedor ═══");
                             
                             //EDITAR A LISTA DE FORNECEDORES UTILIZANDO o Método @Override toString() 'Que personaliza' o metodo de listar fornecedores
-                            System.out.println("LISTA DE FORNECEDORES");
+                            System.out.println("Lista de fornecedores");
                             for (int j = 0; j < tamanhoDoVetor; j++) {
                                 System.out.println("NOME : " + fornecedor[j].getNomeFornecedor());
                                 System.out.println("ID : " + fornecedor[j].getIdFornecedor());
-                                System.out.println("==========================");
+                                System.out.println("══════════════════════════════");
                             }
                             System.out.println("Informe o Código do Fornecedor:");
                             informarID = scanner.nextInt();
