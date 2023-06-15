@@ -12,8 +12,6 @@ public class FuncionariosMenu extends Funcionarios{
         private int opcaoWhile;
         private int opcaoClasses;
         private int informarID;
-    
-      
         public void menuFuncionarios() {
         opcaoWhile = -1;
         while (opcaoWhile != 0) {      
