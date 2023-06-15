@@ -46,98 +46,96 @@ public class Funcionarios extends Pessoa {
     public void consultarTodos() {
 
         for (Funcionarios funcionarios : listaFuncionario) {
-            System.out.println("ID : " + funcionarios.getIdFuncionario());
-            System.out.println("NOME : " + funcionarios.getNome());
-            System.out.println("CARGO : " + funcionarios.getCargo());
-            System.out.println("DATA ADMISSÃO : " + funcionarios.getDataAdmissao());
-            System.out.println("SALARIO : " + funcionarios.getSalario());
-            System.out.println("COMISSÃO : " + funcionarios.getComissao());
-            System.out.println("NUMERO DA CERTEIRA DE TRABALHO : " + funcionarios.getnCarteiraTrabalho());
-            System.out.println("DATA DE NASCIMENTO : " + funcionarios.getDataNascimento());
-            System.out.println("CPF : " + funcionarios.getCpf());
-            System.out.println("RG : " + funcionarios.getRg());
-            System.out.println("TELEFONE : " + funcionarios.getTelefone());
-            System.out.println("EMAIL : " + funcionarios.getEmail());
-            System.out.println("ENDEREÇO : " + funcionarios.getEndereco());
-            System.out.println("BAIRRO : " + funcionarios.getBairro());
-            System.out.println("REFERENCIA : " + funcionarios.getReferencia());
-            System.out.println("CEP : " + funcionarios.getCep());
-            System.out.println("CIDADE : " + funcionarios.getCidade());
-            System.out.println("ESTADO : " + funcionarios.getEstado());
+    System.out.println("ID: " + funcionarios.getIdFuncionario());
+    System.out.println("Nome: " + funcionarios.getNome());
+    System.out.println("Cargo: " + funcionarios.getCargo());
+    System.out.println("Data de Admissão: " + funcionarios.getDataAdmissao());
+    System.out.println("Salário: " + funcionarios.getSalario());
+    System.out.println("Comissão: " + funcionarios.getComissao());
+    System.out.println("Número da Carteira de Trabalho: " + funcionarios.getnCarteiraTrabalho());
+    System.out.println("Data de Nascimento: " + funcionarios.getDataNascimento());
+    System.out.println("CPF: " + funcionarios.getCpf());
+    System.out.println("RG: " + funcionarios.getRg());
+    System.out.println("Telefone: " + funcionarios.getTelefone());
+    System.out.println("Email: " + funcionarios.getEmail());
+    System.out.println("Endereço: " + funcionarios.getEndereco());
+    System.out.println("Bairro: " + funcionarios.getBairro());
+    System.out.println("Referência: " + funcionarios.getReferencia());
+    System.out.println("CEP: " + funcionarios.getCep());
+    System.out.println("Cidade: " + funcionarios.getCidade());
+    System.out.println("Estado: " + funcionarios.getEstado());
+    System.out.println("========================");
+}
 
-            System.out.println("========================");
-        }
-    }
+// ...
 
-    public void CadastrarFuncionario() {
+public void CadastrarFuncionario() {
+    listaFuncionario.add(new Funcionarios());
+    for (Funcionarios funcionarios : listaFuncionario) {
+        if (funcionarios.getIdFuncionario() == 0) {
+            funcionarios.setIdFuncionario(random.nextInt(1000));
+            System.out.println("O ID do Funcionário será " + funcionarios.getIdFuncionario());
 
-        listaFuncionario.add(new Funcionarios());
-        for (Funcionarios funcionarios : listaFuncionario) {
-            if (funcionarios.getIdFuncionario() == 0) {
+            System.out.println("Informe o Nome do Funcionário:");
+            funcionarios.setNome(Ler.next());
+            Ler.nextLine();
+            System.out.println("Informe o Cargo:");
+            funcionarios.setCargo(Ler.nextLine());
 
-                funcionarios.setIdFuncionario(random.nextInt(1000));
-                System.out.println("ID DO FUNCIONARIO SERA " + funcionarios.getIdFuncionario());
+            System.out.println("Informe a Data de Admissão:");
+            funcionarios.setDataAdmissao(Ler.nextLine());
 
-                System.out.println("INFORME O NOME DO FUNCIONARIO ");
-                funcionarios.setNome(Ler.next());
-                Ler.nextLine();
-                System.out.println("INFORME O CARGO ");
-                funcionarios.setCargo(Ler.nextLine());
+            System.out.println("Informe o Salário:");
+            funcionarios.setSalario(Ler.nextDouble());
 
-                System.out.println("INFORME A DATA DE ADMISSÃO :");
-                funcionarios.setDataAdmissao(Ler.nextLine());
+            System.out.println("Informe a Comissão:");
+            funcionarios.setComissao(Ler.nextDouble());
+            Ler.nextLine();
+            System.out.println("Informe o Número da Carteira de Trabalho:");
+            funcionarios.setnCarteiraTrabalho(Ler.nextLine());
 
-                System.out.println("INFORME O SALARIO :");
-                funcionarios.setSalario(Ler.nextDouble());
+            System.out.println("Informe a Data de Nascimento:");
+            funcionarios.setDataNascimento(Ler.next());
 
-                System.out.println("INFORME A COMISSÃO :");
-                funcionarios.setComissao(Ler.nextDouble());
-                Ler.nextLine();
-                System.out.println("INFORME O NUMERO DA CERTEIRA DE TRABALHO :");
-                funcionarios.setnCarteiraTrabalho(Ler.nextLine());
+            Ler.nextLine();
+            System.out.println("Informe o CPF (apenas números, 11 dígitos):");
+            funcionarios.setCpf(cpf_formatador(cpfParaFormatar = Ler.next()));
+            System.out.println(funcionarios.getCpf());
 
-                System.out.println("DATA DE NASCIMENTO :");
-                funcionarios.setDataNascimento(Ler.next());
+            System.out.println("Informe o RG (apenas números, 10 dígitos):");
+            funcionarios.setRg(rg_formatador(rgParaFormatar = Ler.next()));
+            System.out.println(funcionarios.getRg());
 
-                Ler.nextLine();
-                System.out.println("INFORME O CPF ( apenas numeros , 11 numeros):");
-                funcionarios.setCpf(cpf_formatador(cpfParaFormatar = Ler.next()));
-                System.out.println(funcionarios.getCpf());
+            Ler.nextLine();
 
-                System.out.println("INFORME O RG ( apenas numeros, 10 numeros ):");
-                funcionarios.setRg(rg_formatador(rgParaFormatar = Ler.next()));
-                System.out.println(funcionarios.getRg());
+            System.out.println("Informe o Telefone:");
+            funcionarios.setTelefone(Ler.next());
+            System.out.println("Informe o Email:");
+            funcionarios.setEmail(Ler.next());
+            Ler.nextLine();
+            System.out.println("Informe o Endereço:");
+            funcionarios.setEndereco(Ler.next());
+            Ler.nextLine();
+            System.out.println("Informe o Bairro:");
+            funcionarios.setBairro(Ler.next());
+            Ler.nextLine();
+            System.out.println("Informe Alguma Referência:");
+            funcionarios.setReferencia(Ler.next());
+            Ler.nextLine();
 
-                Ler.nextLine();
+            System.out.println("Informe o CEP (apenas números, 7 dígitos):");
+            funcionarios.setCep(cep_formatador(cepParaFormatar = Ler.next()));
+            System.out.println(funcionarios.getCep());
 
-                System.out.println("INFORME O TELEFONE :");
-                funcionarios.setTelefone(Ler.next());
-                System.out.println("INFORME O EMAIL :");
-                funcionarios.setEmail(Ler.next());
-                Ler.nextLine();
-                System.out.println("INFORME O ENDERECO :");
-                funcionarios.setEndereco(Ler.next());
-                Ler.nextLine();
-                System.out.println("INFORME O BAIRRO :");
-                funcionarios.setBairro(Ler.next());
-                Ler.nextLine();
-                System.out.println("INFORME ALGUMA REFERENCIA :");
-                funcionarios.setReferencia(Ler.next());
-                Ler.nextLine();
+            Ler.nextLine();
 
-                System.out.println("INFORME O CEP (apenas numeros, 7 numeros):");
-                funcionarios.setCep(cep_formatador(cepParaFormatar = Ler.next()));
-                System.out.println(funcionarios.getCep());
-
-                Ler.nextLine();
-
-                System.out.println("INFORME A CIDADE :");
-                funcionarios.setCidade(Ler.next());
-                Ler.nextLine();
-                System.out.println("INFORME O ESTADO :");
-                funcionarios.setEstado(Ler.next());
-                Ler.nextLine();
-                System.out.println("CADASTRO REALIZADO COM SUCESSO");
+            System.out.println("Informe a Cidade:");
+            funcionarios.setCidade(Ler.next());
+            Ler.nextLine();
+            System.out.println("Informe o Estado:");
+            funcionarios.setEstado(Ler.next());
+            Ler.nextLine();
+            System.out.println("Cadastro realizado com sucesso");
 
                 break;
             }
@@ -145,194 +143,152 @@ public class Funcionarios extends Pessoa {
 
     }
 
-    public void AtualizarFuncionario() {
-        System.out.println("INFORME O ID QUE SERA ATUALIZADO ");
-        int buscarId = Ler.nextInt();
-        for (Funcionarios funcionarios : listaFuncionario) {
-            if (funcionarios.getIdFuncionario() == buscarId) {
+          public void AtualizarFuncionario() {
+            System.out.println("Informe o ID que será atualizado: ");
+            int buscarId = Ler.nextInt();
+            for (Funcionarios funcionarios : listaFuncionario) {
+                if (funcionarios.getIdFuncionario() == buscarId) {
 
-                System.out.println("[1]ID");
-                System.out.println("[2]NOME");
-                System.out.println("[3]CARGO");
-                System.out.println("[4]DATA ADMISSÃO");
-                System.out.println("[5]SALARIO");
-                System.out.println("[6]COMISSÃO");
-                System.out.println("[7]NUMERO CARTEIRA DE TRABALHO");
-                System.out.println("[8]DATA NASCIMENTO");
-                System.out.println("[9]CPF");
-                System.out.println("[10]RG");
-                System.out.println("[11]TELEFONE");
-                System.out.println("[12]E-MAIL");
-                System.out.println("[13]ENDEREÇO");
-                System.out.println("[14]BAIRRO");
-                System.out.println("[15]REFERENCIA");
-                System.out.println("[16]CEP");
-                System.out.println("[17]CIDADE");
-                System.out.println("[18]ESTADO");
+                    System.out.println("[1] Id");
+                    System.out.println("[2] Nome");
+                    System.out.println("[3] Cargo");
+                    System.out.println("[4] Data de Admissão");
+                    System.out.println("[5] Salário");
+                    System.out.println("[6] Comissão");
+                    System.out.println("[7] Número da Carteira de Trabalho");
+                    System.out.println("[8] Data de Nascimento");
+                    System.out.println("[9] CPF");
+                    System.out.println("[10] RG");
+                    System.out.println("[11] Telefone");
+                    System.out.println("[12] E-mail");
+                    System.out.println("[13] Endereço");
+                    System.out.println("[14] Bairro");
+                    System.out.println("[15] Referência");
+                    System.out.println("[16] CEP");
+                    System.out.println("[17] Cidade");
+                    System.out.println("[18] Estado");
 
-                while (!Ler.hasNextInt()) {
-                    System.out.print("Tente novamente escolhendo uma das opcoes acima");
-                    Ler.next(); //
+                    while (!Ler.hasNextInt()) {
+                        System.out.print("Tente novamente escolhendo uma das opções acima");
+                        Ler.next();
+                    }
+
+                    int opcao = Ler.nextInt();
+                    Ler.nextLine(); // Limpar o buffer
+
+                    switch (opcao) {
+                        case 1:
+                            System.out.println("Informe o novo ID: ");
+                            funcionarios.setIdFuncionario(Ler.nextInt());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 2:
+                            System.out.println("Informe o novo nome do funcionário: ");
+                            funcionarios.setNome(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 3:
+                            System.out.println("Informe o novo cargo: ");
+                            funcionarios.setCargo(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 4:
+                            System.out.println("Informe a nova data de admissão: ");
+                            funcionarios.setDataAdmissao(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 5:
+                            System.out.println("Informe o novo salário: ");
+                            funcionarios.setSalario(Ler.nextDouble());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 6:
+                            System.out.println("Informe a nova comissão: ");
+                            funcionarios.setComissao(Ler.nextDouble());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 7:
+                            System.out.println("Informe o novo número da carteira de trabalho: ");
+                            funcionarios.setnCarteiraTrabalho(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 8:
+                            System.out.println("Informe a nova data de nascimento: ");
+                            funcionarios.setDataNascimento(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 9:
+                            System.out.println("Informe o novo CPF: ");
+                            funcionarios.setCpf(cpf_formatador(cpfParaFormatar = Ler.next()));
+                            System.out.println(getCpf());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 10:
+                            System.out.println("Informe o novo RG: ");
+                            funcionarios.setRg(rg_formatador(rgParaFormatar = Ler.next()));
+                            System.out.println(getRg());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 11:
+                            System.out.println("Informe o novo telefone: ");
+                            funcionarios.setTelefone(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 12:
+                            System.out.println("Informe o novo e-mail: ");
+                            funcionarios.setEmail(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 13:
+                            System.out.println("Informe o novo endereço: ");
+                            funcionarios.setEndereco(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 14:
+                            System.out.println("Informe o novo bairro: ");
+                            funcionarios.setBairro(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 15:
+                            System.out.println("Informe a nova referência: ");
+                            funcionarios.setReferencia(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 16:
+                            System.out.println("Informe o novo CEP: ");
+                            funcionarios.setCep(cep_formatador(cepParaFormatar = Ler.next()));
+                            System.out.println(getCep());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 17:
+                            System.out.println("Informe a nova cidade: ");
+                            funcionarios.setCidade(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 18:
+                            System.out.println("Informe o novo estado: ");
+                            funcionarios.setEstado(Ler.nextLine());
+                            System.out.println("==== Cadastro atualizado ====");
+                            break;
+                        case 0:
+                            System.out.println("==== Sair ====");
+                            opcaoWhile = 0; // Finaliza o método
+                            break;
+                    }
                 }
-
-                int opcao = Ler.nextInt();
-                switch (opcao) {
-
-                    case 1:
-                        System.out.println("INFORME O ID ");
-                        funcionarios.setIdFuncionario(Ler.nextInt());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 2:
-                        System.out.println("INFORME O NOME DO FUNCIONARIO ");
-                        funcionarios.setNome(Ler.nextLine());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 3:
-                        System.out.println("INFORME O CARGO ");
-                        funcionarios.setCargo(Ler.nextLine());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 4:
-                        System.out.println("INFORME A DATA DE ADMISSÃO :");
-                        funcionarios.setDataAdmissao(Ler.next());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 5:
-                        System.out.println("INFORME O SALARIO :");
-                        funcionarios.setSalario(Ler.nextDouble());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 6:
-                        System.out.println("INFORME A COMISSÃO :");
-                        funcionarios.setComissao(Ler.nextDouble());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 7:
-                        System.out.println("INFORME O NUMERO DA CERTEIRA DE TRABALHO :");
-                        funcionarios.setnCarteiraTrabalho(Ler.next());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 8:
-                        System.out.println("DATA DE NASCIMENTO :");
-                        funcionarios.setDataNascimento(Ler.next());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 9:
-                        System.out.println("INFORME O CPF :");
-                        funcionarios.setCpf(cpf_formatador(cpfParaFormatar = Ler.next()));
-                        System.out.println(getCpf());
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 10:
-                        System.out.println("INFORME O RG :");
-                        funcionarios.setRg(rg_formatador(rgParaFormatar = Ler.next()));
-                        System.out.println(getRg());
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-
-                        break;
-
-                    case 11:
-                        System.out.println("INFORME O TELEFONE :");
-                        funcionarios.setTelefone(Ler.next());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 12:
-                        System.out.println("INFORME O EMAIL :");
-                        funcionarios.setEmail(Ler.nextLine());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 13:
-                        System.out.println("INFORME O ENDERECO :");
-                        funcionarios.setEndereco(Ler.nextLine());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 14:
-                        System.out.println("INFORME O BAIRRO :");
-                        funcionarios.setBairro(Ler.next());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 15:
-                        System.out.println("INFORME ALGUMA REFERENCIA :");
-                        funcionarios.setReferencia(Ler.nextLine());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 16:
-                        System.out.println("INFORME O CEP :");
-                        funcionarios.setCep(cep_formatador(cepParaFormatar = Ler.next()));
-                        System.out.println(getCep());
-
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-                        break;
-
-                    case 17:
-                        System.out.println("INFORME A CIDADE :");
-                        funcionarios.setCidade(Ler.nextLine());
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-
-                        break;
-
-                    case 18:
-                        System.out.println("INFORME O ESTADO :");
-                        funcionarios.setEstado(Ler.nextLine());
-                        System.out.println("==== CADASTRO ATUALIZADO ====");
-
-                        break;
-
-                    case 0:
-                        System.out.println("==== SAIR ====");
-                        opcaoWhile = 0; //finaliza o metodod
-
-                        break;
-
-                }
-
             }
-
         }
-
-    }
 
     public void ExcluirFuncionario() {
         for (int i = 0; i < listaFuncionario.size(); i++) {
-            System.out.println("INFORME O ID PARA DELETAR");
+            System.out.println("Informe o ID para deletar: ");
             int idExcluir = Ler.nextInt();
             if (listaFuncionario.get(i).getIdFuncionario() == idExcluir) {
-
                 listaFuncionario.remove(i);
-                System.out.println("FUNCIONARIO EXCLUIDO");
+                System.out.println("Funcionário excluído");
                 break;
             }
-
         }
-
     }
 
     public int getIdFuncionario() {
